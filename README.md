@@ -1,0 +1,2 @@
+azureautonomie-wp-theme
+=======================
