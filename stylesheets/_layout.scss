@@ -1,0 +1,41 @@
+/** Layout */
+
+@import "unsemantic/assets/sass/partials/unsemantic-vars";
+@import "helpers";
+@include unsemantic-grid-placeholders;
+
+
+/** Grid */
+.grid-container {
+	@extend %grid-container;
+}
+
+.grid-parent {
+	@extend %grid-parent;
+	@extend %clearfix;
+}
+
+.grid-25 {
+	@extend %grid-25;
+}
+
+.grid-33 {
+	@extend %grid-33;
+}
+
+.grid-50 {
+	@extend %grid-50;
+}
+
+.grid-100 {
+	@extend %grid-100;
+}
+
+/** Spacing */
+.mar-bot_2 {
+	margin-bottom: padding(2);
+}
+
+.mar-bot_3 {
+	margin-bottom: padding(3);
+}

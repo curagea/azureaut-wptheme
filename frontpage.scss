@@ -1,0 +1,97 @@
+/**
+ * Frontpage CSS
+ */
+$unsemantic-ie7-support: false;
+$container-max-width: 768px;
+
+@import "unsemantic/assets/sass/partials/unsemantic-vars";
+@include unsemantic-grid-placeholders;
+
+@import "bourbon/bourbon";
+
+@import "stylesheets/colors";
+@import "stylesheets/helpers";
+
+.frontpage {
+	// extend grid-container to use special container-max-width
+	@extend %grid-container;
+	text-align: center;
+	// Explicit about -top and -bottom to avoid overriding grid-container's padding
+	padding-top: padding(10);
+	padding-bottom: padding(10);
+
+	nav li {
+		@extend %grid-columns-all;
+		@extend %grid-25;
+
+		a {
+			@include fluid-square(100%);
+			border-radius: 50%;
+			background: $light-blue;
+			position: relative;
+			top: 0;
+			@include transition(top 0.5s);
+
+			&:hover,
+			&:focus {
+				background: $light-gray-blue;
+				top: -1.25em;
+			}
+
+			&:before {
+				content: "";
+				@include fluid-square(70%);
+				background: {
+					repeat: no-repeat;
+					size: contain;
+					position: center;
+				}
+				position: absolute;
+				top: 15%;
+				left: 15%;
+				z-index: 10;
+			}
+
+			&.journal:before {
+				background-image: url(images/journal-icon.png);
+			}
+
+			&.pastime:before {
+				background-image: url(images/pastime-icon.png);
+			}
+
+			&.portfolio:before {
+				background-image: url(images/portfolio-icon.png);
+			}
+
+			&.about:before {
+				background-image: url(images/bio-icon.png);
+			}
+
+			span {
+				display: block;
+				position: relative;
+				top: 100%;
+				opacity: 0;
+				margin: 0 auto;
+				@include transition(opacity 0.5s);
+			}
+
+			&:hover span,
+			&:focus span {
+				opacity: 1;
+			}
+		}
+	}
+
+	.welcome-image {
+		width: 100%;
+		margin: 0 auto padding(3);
+		max-width: 600px;
+	}
+
+	.intro {
+		font-size: 1.5em;
+	}
+
+}

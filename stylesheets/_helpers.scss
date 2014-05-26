@@ -1,0 +1,24 @@
+/** Helpers */
+
+@import "unsemantic/assets/sass/partials/unsemantic-vars";
+
+
+@function padding($n) {
+	@return $n * $gutter-half;
+}
+
+@mixin fluid-square($n) {
+	display: block;
+	width: $n;
+	height: 0;
+	padding-bottom: $n;
+}
+
+@mixin offscreen {
+	position: absolute;
+	left: -9999em;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}

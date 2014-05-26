@@ -1,0 +1,38 @@
+/**
+  Theme Name: Azure Autonomie Theme
+  Version: 1.0
+  Author: Hannah Hu
+  Author URI: http://www.azureautonomie.com
+  Tags: valid HTML5, valid CSS, fluid-width, responsive
+  Licence: GPL
+  
+  Description: The theme for Azure Autonomie. May not be used by anyone else.
+  Seriously.
+*/
+
+$unsemantic-ie7-support: false;
+$media-mobile-max: 767px;
+$media-desktop-min: 768px;
+
+@import "unsemantic/assets/sass/partials/reset";
+@import "unsemantic/assets/sass/partials/unsemantic-ie-snap";
+@import "unsemantic/assets/sass/partials/unsemantic-grid-responsive-tablet";
+
+@import "stylesheets/typography";
+@import "stylesheets/layout";
+@import "stylesheets/colors";
+
+
+a {
+	color: $mid-blue;
+
+	&:hover,
+  &:focus {
+		color: $light-blue;
+	}
+
+  &:visited {
+    color: $dark-gray-blue;
+  }
+
+}
