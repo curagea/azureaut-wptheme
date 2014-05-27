@@ -97,8 +97,14 @@
   transition: all 0.5s; }
 .desktop .frontpage nav li a:hover:before, .desktop .frontpage nav li a:focus:before {
   opacity: 1;
-  top: -5px;
-  box-shadow: 0 5px gray; }
+  top: -10px;
+  box-shadow: 0 10px gray; }
+.desktop .frontpage nav li a:active:before {
+  top: 0;
+  box-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none; }
 .desktop .frontpage nav li a span {
   opacity: 0;
   -webkit-transition: all 0.5s;

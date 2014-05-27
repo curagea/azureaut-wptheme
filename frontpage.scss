@@ -109,8 +109,14 @@ $container-max-width: 768px;
 			&:hover:before,
 			&:focus:before {
 				opacity: 1;
-				top: -1 * padding(0.5);
-				box-shadow: 0 padding(0.5) hsl(0, 0, 50);
+				top: -1 * padding(1);
+				box-shadow: 0 padding(1) hsl(0, 0, 50);
+			}
+
+			&:active:before {
+				top: 0;
+				box-shadow: none;
+				@include transition(none);
 			}
 
 			span {
