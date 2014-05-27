@@ -26,13 +26,13 @@ $media-desktop-min: 768px;
 a {
 	color: $mid-blue;
 
+  &:visited {
+    color: $dark-gray-blue;
+  }
+
 	&:hover,
   &:focus {
 		color: $light-blue;
 	}
-
-  &:visited {
-    color: $dark-gray-blue;
-  }
 
 }

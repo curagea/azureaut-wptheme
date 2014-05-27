@@ -14,12 +14,12 @@
     who knows - you might learn a thing or two <a href="/about">about me</a>.
   </p>
 
-  <nav class="mar-bot_3">
+  <nav>
     <ul class="grid-parent">
-      <li><a href="/journal" class="journal"><span class="notable-text">Journal</span></a></li>
-      <li><a href="/pastime" class="pastime"><span class="notable-text">Pastime</span></a></li>
-      <li><a href="/portfolio" class="portfolio"><span class="notable-text">Portfolio</span></a></li>
-      <li><a href="/about" class="about"><span class="notable-text">About</span></a></li>
+      <li><a href="/journal" class="journal"><span>Journal</span></a></li>
+      <li><a href="/pastime" class="pastime"><span>Pastime</span></a></li>
+      <li><a href="/portfolio" class="portfolio"><span>Portfolio</span></a></li>
+      <li><a href="/about" class="about"><span>About</span></a></li>
     </ul>
   </nav>
   <footer class="grid-100">

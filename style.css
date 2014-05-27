@@ -1517,7 +1517,7 @@ p {
 /** Colors */
 a {
   color: #00a0cc; }
-  a:hover, a:focus {
-    color: #00c8ff; }
   a:visited {
     color: #365a63; }
+  a:hover, a:focus {
+    color: #66deff; }
