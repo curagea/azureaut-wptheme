@@ -88,7 +88,7 @@ $container-max-width: 768px;
 				position: relative;
 				top: 100%;
 				margin: 0 auto;
-				padding-top: padding(1);
+				padding-top: padding(0.5);
 			}
 		}
 	}
@@ -140,12 +140,12 @@ $container-max-width: 768px;
 		a {
 
 			&:before {
-				@include fluid-square(25%, inline-block);
+				@include fluid-square(30%, inline-block);
 				vertical-align: middle;
 			}
 
 			span {
-				@include font-size(3);
+				@include font-size(2.5);
 				display: inline-block;
 				vertical-align: middle;
 				margin-left: padding(3);
