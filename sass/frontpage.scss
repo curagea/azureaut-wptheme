@@ -9,8 +9,8 @@ $container-max-width: 768px;
 
 @import "bourbon/bourbon";
 
-@import "stylesheets/colors";
-@import "stylesheets/helpers";
+@import "colors";
+@import "helpers";
 
 .frontpage {
 	// extend grid-container to use special container-max-width

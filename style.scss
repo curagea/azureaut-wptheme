@@ -14,13 +14,13 @@ $unsemantic-ie7-support: false;
 $media-mobile-max: 767px;
 $media-desktop-min: 768px;
 
-@import "unsemantic/assets/sass/partials/reset";
-@import "unsemantic/assets/sass/partials/unsemantic-ie-snap";
-@import "unsemantic/assets/sass/partials/unsemantic-grid-responsive-tablet";
+@import "sass/unsemantic/assets/sass/partials/reset";
+@import "sass/unsemantic/assets/sass/partials/unsemantic-ie-snap";
+@import "sass/unsemantic/assets/sass/partials/unsemantic-grid-responsive-tablet";
 
-@import "stylesheets/typography";
-@import "stylesheets/layout";
-@import "stylesheets/colors";
+@import "sass/typography";
+@import "sass/layout";
+@import "sass/colors";
 
 
 a {
