@@ -1,21 +1,11 @@
 <?php
 
-/**
-* Wordpress Naked, a very minimal wordpress theme designed to be used as a base for other themes.
-*
-* Please feel free to use this code as a base for your own themes but please do leave this header intaact.
-*
-* Darren Beale
-* info@siftware.co.uk
-*
-* P.S. if you're not used WP before then this link will likely be useful:
-* http://codex.wordpress.org/Template_Tags (tag == php function)
-* 
-*/
+function page_link($page_name) {
+  $page_obj = get_page_by_title($page_name);
+  return get_page_link($page_obj->ID);
+}
 
 /**
-* naked_nav()
-*
 * @desc a wrapper for the wordpress wp_list_pages() function that
 * will display one or two unordered lists:
 * 1) primary nav, a ul with css id #nav - always shown even if empty
@@ -23,26 +13,16 @@
 *
 * TODO: default css provided to allow space for both nav 'bars' one below the other to stop the page jig
 *
-* @param obj post
 * @return string (html)
 */
 
-function get_page_id($page_name){
-	global $wpdb;
-	$page_name = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$page_name."'");
-	return $page_name;
-}
-
-
-function naked_nav($post = 0)
-{
+function main_nav() {
   $output = "";
-  $subNav = "";
   $home_id = get_page_id(home);
   $params = "title_li=&depth=1&echo=0&exclude=$home_id";
 
   // always show top level
-  $output .= '<div id="main-menu">';
+  $output .= '<div class="main-menu">';
   $output .= '<ul>';
   $output .= wp_list_pages($params);
   $output .= '</ul>';
@@ -55,8 +35,7 @@ function naked_nav($post = 0)
 * @desc make the site's heading & tagline an h1 on the homepage and an h4 on internal pages
 * Naked's default CSS should make the two different states look identical
 */
-function do_heading()
-{
+function do_heading() {
   $output = "";
   
   if(is_home()) $output .= "<h1 id='site-title'>"; else  $output .= "<h4 id='site-title'>";
@@ -71,10 +50,9 @@ function do_heading()
 /**
 * register_sidebar()
 *
-*@desc Registers the markup to display in and around a widget
+* @desc Registers the markup to display in and around a widget
 */
-if ( function_exists('register_sidebar') )
-{
+if ( function_exists('register_sidebar') ) {
   register_sidebar(array('name'=>'journal'));
   register_sidebar(array('name'=>'portfolio'));
   register_sidebar(array('name'=>'about'));
@@ -92,8 +70,7 @@ if ( function_exists('register_sidebar') )
 * 
 * @return boolean
 */
-function will_paginate() 
-{
+function will_paginate() {
   global $wp_query;
   
   if ( !is_singular() ) 
@@ -119,8 +96,7 @@ function will_paginate()
  * @uses in_category() Tests against descendant categories
  * @version 2.7
  */
-function post_is_in_descendant_category( $cats, $_post = null )
-{
+function post_is_in_descendant_category( $cats, $_post = null ) {
 	foreach ( (array) $cats as $cat ) {
 		// get_term_children() accepts integer ID only
 		$descendants = get_term_children( (int) $cat, 'category');
@@ -131,7 +107,7 @@ function post_is_in_descendant_category( $cats, $_post = null )
 }
 
 // Register Theme Features
-function custom_theme_features()  {
+function custom_theme_features() {
   global $wp_version;
 
   // Add theme support for Automatic Feed Links
@@ -140,8 +116,18 @@ function custom_theme_features()  {
   else :
     automatic_feed_links();
   endif;
+
+  // Customize menu items?
+  add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+  function special_nav_class($classes, $item){
+    if (get_the_ID() != $item->ID){ //Notice you can change the conditional from is_single() and $item->title
+      $classes[] = "hidden";
+    }
+    return $classes;
+  }
 }
 
 // Hook into the 'after_setup_theme' action
 add_action( 'after_setup_theme', 'custom_theme_features' );
+
 ?>

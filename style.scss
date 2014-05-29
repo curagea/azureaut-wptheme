@@ -17,11 +17,21 @@ $media-desktop-min: 768px;
 @import "sass/unsemantic/assets/sass/partials/reset";
 @import "sass/unsemantic/assets/sass/partials/unsemantic-ie-snap";
 @import "sass/unsemantic/assets/sass/partials/unsemantic-grid-responsive-tablet";
+@include unsemantic-grid-placeholders;
+
+@import "sass/bourbon/bourbon";
 
 @import "sass/typography";
 @import "sass/layout";
 @import "sass/colors";
 
+html {
+  min-height: 100%;
+}
+
+body {
+  @include linear-gradient(90deg, #fff 50%, $light-gray-blue 50.1%);
+}
 
 a {
 	color: $mid-blue;
@@ -35,4 +45,26 @@ a {
 		color: $light-blue;
 	}
 
+}
+
+.wrapper {
+  @extend %grid-container;
+  height: 100%;
+
+  .main-content,
+  .sidebar {
+    @extend %grid-columns-all;
+    height: 100%;
+  }
+
+  .main-content {
+    @extend %grid-66;
+    background: #fff;
+  }
+
+  .sidebar {
+    @extend %grid-33;
+    background: $light-gray-blue;
+    padding-left: padding(2);
+  }
 }

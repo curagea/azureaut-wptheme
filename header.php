@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
   <? if (is_front_page()): ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/frontpage.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/frontpage.css">
   <? endif; ?>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <?php wp_head(); ?>

@@ -3,12 +3,13 @@
 @import "unsemantic/assets/sass/partials/unsemantic-vars";
 
 
+
 @function padding($n) {
 	@return $n * $gutter-half;
 }
 
 @mixin font-size($n) {
-	font-size: $n + em;
+	font-size: $n * 100%;
 }
 
 @mixin fluid-square($n, $display: block) {

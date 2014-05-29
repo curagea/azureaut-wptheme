@@ -12,6 +12,10 @@ $container-max-width: 768px;
 @import "colors";
 @import "helpers";
 
+body {
+	background: none;
+}
+
 .frontpage {
 	// extend grid-container to use special container-max-width
 	@extend %grid-container;
@@ -40,19 +44,19 @@ $container-max-width: 768px;
 			}
 
 			&.journal:before {
-				background-image: url(images/journal-icon.png);
+				background-image: url(../images/journal-icon.png);
 			}
 
 			&.pastime:before {
-				background-image: url(images/pastime-icon.png);
+				background-image: url(../images/pastime-icon.png);
 			}
 
 			&.portfolio:before {
-				background-image: url(images/portfolio-icon.png);
+				background-image: url(../images/portfolio-icon.png);
 			}
 
 			&.about:before {
-				background-image: url(images/bio-icon.png);
+				background-image: url(../images/bio-icon.png);
 			}
 		}
 	}
@@ -145,10 +149,11 @@ $container-max-width: 768px;
 			}
 
 			span {
-				@include font-size(2.5);
+				@include font-size(2);
 				display: inline-block;
 				vertical-align: middle;
 				margin-left: padding(3);
+				text-decoration: underline;
 			}
 		}
 	}
