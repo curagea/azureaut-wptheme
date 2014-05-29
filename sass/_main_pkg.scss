@@ -18,13 +18,6 @@ $media-desktop-min: 768px;
 @import "sass/layout";
 @import "sass/colors";
 
-html {
-  min-height: 100%;
-}
-
-body {
-  @include linear-gradient(90deg, #fff 50%, $light-gray-blue 50.1%);
-}
 
 a {
 	color: $mid-blue;

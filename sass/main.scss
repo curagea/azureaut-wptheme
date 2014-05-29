@@ -3,6 +3,14 @@
 @import "main_pkg";
 
 
+html {
+  min-height: 100%;
+}
+
+body {
+  @include linear-gradient(90deg, #fff 50%, $light-gray-blue 50.1%);
+}
+
 .wrapper {
   @extend %grid-container;
   height: 100%;

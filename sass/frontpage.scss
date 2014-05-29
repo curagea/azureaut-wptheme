@@ -7,10 +7,6 @@ $container-max-width: 768px;
 @import "main_pkg";
 
 
-body {
-	background: none;
-}
-
 .frontpage {
 	// extend grid-container to use special container-max-width
 	@extend %grid-container;
