@@ -6,25 +6,10 @@
 
 
 /** Grid */
-.grid-container {
-	@extend %grid-container;
-}
 
 .grid-parent {
 	@extend %grid-parent;
 	@extend %clearfix;
-}
-
-.grid-25 {
-	@extend %grid-25;
-}
-
-.grid-33 {
-	@extend %grid-33;
-}
-
-.grid-50 {
-	@extend %grid-50;
 }
 
 .grid-100 {

@@ -4,13 +4,8 @@
 $unsemantic-ie7-support: false;
 $container-max-width: 768px;
 
-@import "unsemantic/assets/sass/partials/unsemantic-vars";
-@include unsemantic-grid-placeholders;
+@import "main_pkg";
 
-@import "bourbon/bourbon";
-
-@import "colors";
-@import "helpers";
 
 body {
 	background: none;
