@@ -1,6 +1,6 @@
 <? if (!is_mobile()): ?>
-<div class="sidebar" id="sidebar">
-	<div id="content">
+<div class="sidebar">
+	<div class="content">
 		<h2>Azure Autonomie</h2>
 
 		<nav class="main-menu">

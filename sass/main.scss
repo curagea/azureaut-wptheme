@@ -42,6 +42,10 @@ body.tablet {
 			bottom: 0;
 		}
 
+		.content {
+			position: fixed; // Sticky!
+		}
+
 		.sub-menu {
 			margin-left: padding(2);
 		}
