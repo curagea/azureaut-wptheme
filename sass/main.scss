@@ -3,21 +3,25 @@
 @import "main_pkg";
 
 
-html {
-	min-height: 100%;
-}
-
-body {
+body.desktop,
+body.tablet {
 	@include linear-gradient(90deg, #fff 50%, $light-gray-blue 50.1%);
 }
 
 .wrapper {
 	@extend %grid-container;
+
+	.main-content {
+		@extend %grid-columns-all;
+	}
+}
+
+.desktop .wrapper,
+.tablet .wrapper {
 	height: 100%;
 
 	.main-content,
 	.sidebar {
-		@extend %grid-columns-all;
 		height: 100%;
 	}
 
@@ -27,9 +31,11 @@ body {
 	}
 
 	.sidebar {
+		@extend %grid-columns-all;
 		@extend %grid-33;
 		background: $light-gray-blue;
 		padding-left: padding(2);
+		position: relative;
 
 		footer {
 			position: fixed;
@@ -39,5 +45,28 @@ body {
 		.sub-menu {
 			margin-left: padding(2);
 		}
+	}
+}
+
+.mobile {
+	.mobile-header {
+		background: $light-gray-blue;
+		position: fixed;
+		top: 0;
+	}
+
+	.wrapper {
+		.main-content {
+			@extend %grid-100;
+		}
+
+		.main-content {
+			padding-top: 2.5 * 1.35 + em;
+		}
+	}
+
+	footer {
+		@extend %grid-columns-all;
+		@extend %grid-100;
 	}
 }

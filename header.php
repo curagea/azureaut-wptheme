@@ -7,13 +7,18 @@
 	<link rel="shortcut icon" href="/favicon.gif" type="image/x-icon" />
 	<title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
 
-	<? if (is_front_page()): ?>
+	<?php if (is_front_page()): ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/frontpage.css">
-	<? else: ?>
+	<?php else: ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/main.css">
-	<? endif; ?>
+	<?php endif; ?>
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class() ?>>
+	<?php if (is_mobile()): ?>
+		<div class="mobile-header">
+			<h2>Azure Autonomie</h2>
+		</div>
+	<?php endif; ?>

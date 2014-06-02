@@ -1,8 +1,8 @@
 <?php
 
 function page_link($page_name) {
-  $page_obj = get_page_by_title($page_name);
-  return get_page_link($page_obj->ID);
+	$page_obj = get_page_by_title($page_name);
+	return get_page_link($page_obj->ID);
 }
 
 /**
@@ -17,18 +17,18 @@ function page_link($page_name) {
 */
 
 function main_nav() {
-  $output = "";
-  $home_id = get_page_id(home);
-  $params = "title_li=&depth=1&echo=0&exclude=$home_id";
+	$output = "";
+	$home_id = get_page_id(home);
+	$params = "title_li=&depth=1&echo=0&exclude=$home_id";
 
-  // always show top level
-  $output .= '<div class="main-menu">';
-  $output .= '<ul>';
-  $output .= wp_list_pages($params);
-  $output .= '</ul>';
-  $output .= '</div>';
+	// always show top level
+	$output .= '<div class="main-menu">';
+	$output .= '<ul>';
+	$output .= wp_list_pages($params);
+	$output .= '</ul>';
+	$output .= '</div>';
 
-  return $output;
+	return $output;
 }
 
 /**
@@ -36,15 +36,15 @@ function main_nav() {
 * Naked's default CSS should make the two different states look identical
 */
 function do_heading() {
-  $output = "";
-  
-  if(is_home()) $output .= "<h1 id='site-title'>"; else  $output .= "<h4 id='site-title'>";
+	$output = "";
+	
+	if(is_home()) $output .= "<h1 id='site-title'>"; else  $output .= "<h4 id='site-title'>";
 
-  $output .= "<a href='"  . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a>";
+	$output .= "<a href='"  . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a>";
 
-  if(is_home()) $output .= "</h1>"; else  $output .= "</h4>";
+	if(is_home()) $output .= "</h1>"; else  $output .= "</h4>";
 
-  return $output;
+	return $output;
 }
 
 /**
@@ -53,16 +53,16 @@ function do_heading() {
 * @desc Registers the markup to display in and around a widget
 */
 if ( function_exists('register_sidebar') ) {
-  register_sidebar(array('name'=>'journal'));
-  register_sidebar(array('name'=>'portfolio'));
-  register_sidebar(array('name'=>'about'));
-  register_sidebar(array('name'=>'pastime'));
-  register_sidebar(array(
-    'name'=>'twitter-box', 
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => ''));
+	register_sidebar(array('name'=>'journal'));
+	register_sidebar(array('name'=>'portfolio'));
+	register_sidebar(array('name'=>'about'));
+	register_sidebar(array('name'=>'pastime'));
+	register_sidebar(array(
+		'name'=>'twitter-box', 
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''));
 }
 
 /**
@@ -71,18 +71,18 @@ if ( function_exists('register_sidebar') ) {
 * @return boolean
 */
 function will_paginate() {
-  global $wp_query;
-  
-  if ( !is_singular() ) 
-  {
-    $max_num_pages = $wp_query->max_num_pages;
-    
-    if ( $max_num_pages > 1 ) 
-    {
-      return true;
-    }
-  }
-  return false;
+	global $wp_query;
+	
+	if ( !is_singular() ) 
+	{
+		$max_num_pages = $wp_query->max_num_pages;
+		
+		if ( $max_num_pages > 1 ) 
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 /**
@@ -108,24 +108,43 @@ function post_is_in_descendant_category( $cats, $_post = null ) {
 
 // Register Theme Features
 function custom_theme_features() {
-  global $wp_version;
+	global $wp_version;
 
-  // Add theme support for Automatic Feed Links
-  if ( version_compare( $wp_version, '3.0', '>=' ) ) :
-    add_theme_support( 'automatic-feed-links' );
-  else :
-    automatic_feed_links();
-  endif;
+	// Add theme support for Automatic Feed Links
+	if ( version_compare( $wp_version, '3.0', '>=' ) ) :
+		add_theme_support( 'automatic-feed-links' );
+	else :
+		automatic_feed_links();
+	endif;
 
-  // Customize menu items?
-  add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-  function special_nav_class($classes, $item){
-    if (get_the_ID() != $item->ID){ //Notice you can change the conditional from is_single() and $item->title
-      $classes[] = "hidden";
-    }
-    return $classes;
-  }
+	// Customize menu items?
+	add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+	function special_nav_class($classes, $item){
+		if (get_the_ID() != $item->ID){ //Notice you can change the conditional from is_single() and $item->title
+			$classes[] = "hidden";
+		}
+		return $classes;
+	}
+
+	// Pitch the admin bar
+	show_admin_bar(false);
 }
+
+// Init jQuery
+function init_jquery() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+		// Load the Google jQuery script
+		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', false, '2.1.1', true);
+		wp_enqueue_script('jquery');
+
+		// Get my script
+		if (!is_front_page()) {
+			wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/theme-script.js', array('jquery'), '1.0', true);
+		}
+	}
+}
+add_action( 'init', 'init_jquery' );
 
 // Hook into the 'after_setup_theme' action
 add_action( 'after_setup_theme', 'custom_theme_features' );
