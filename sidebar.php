@@ -1,6 +1,6 @@
 <? if (!is_mobile()): ?>
 <div class="sidebar">
-	<div class="content">
+	<div class="content sticky">
 		<h2>Azure Autonomie</h2>
 
 		<nav class="main-menu">
@@ -38,4 +38,5 @@
 
 	</div>
 </div>
+
 <?php endif; ?>

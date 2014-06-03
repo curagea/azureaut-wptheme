@@ -1,6 +1,8 @@
 <?php if (is_mobile()): ?>
-	<footer>
-		<?php get_template_part('copyright') ?>
+	<footer class="grid-container">
+		<div class="grid-100">
+			<?php get_template_part('copyright') ?>
+		</div>
 	</footer>
 <?php endif; ?>
 

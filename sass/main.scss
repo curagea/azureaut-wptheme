@@ -42,10 +42,6 @@ body.tablet {
 			bottom: 0;
 		}
 
-		.content {
-			position: fixed; // Sticky!
-		}
-
 		.sub-menu {
 			margin-left: padding(2);
 		}
@@ -54,23 +50,26 @@ body.tablet {
 
 .mobile {
 	.mobile-header {
-		background: $light-gray-blue;
-		position: fixed;
-		top: 0;
+
+		.content {
+			@extend %grid-columns-all;
+			width: 100%;
+			background: $light-gray-blue;
+
+			.surprise-menu {
+				display: none;
+			}
+		}
 	}
 
 	.wrapper {
 		.main-content {
 			@extend %grid-100;
-		}
-
-		.main-content {
 			padding-top: 2.5 * 1.35 + em;
 		}
 	}
 
 	footer {
-		@extend %grid-columns-all;
-		@extend %grid-100;
+		margin-top: padding(5);
 	}
 }

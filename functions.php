@@ -138,9 +138,16 @@ function init_jquery() {
 		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', false, '2.1.1', true);
 		wp_enqueue_script('jquery');
 
-		// Get my script
+		// Get my JS
 		if (!is_front_page()) {
-			wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/theme-script.js', array('jquery'), '1.0', true);
+			$js_file = (is_mobile() ? '/js/mobile.js' : '/js/theme.js');
+			wp_enqueue_script(
+				'custom-script',
+				get_stylesheet_directory_uri() . $js_file,
+				array('jquery'),
+				'1.0',
+				true
+			);
 		}
 	}
 }

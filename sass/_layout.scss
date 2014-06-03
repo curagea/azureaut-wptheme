@@ -13,14 +13,26 @@
 }
 
 .grid-100 {
+	@extend %grid-columns-all;
 	@extend %grid-100;
 }
 
+.grid-container {
+	@extend %grid-container;
+}
+
 /** Spacing */
+
 .mar-bot_2 {
 	margin-bottom: padding(2);
 }
 
 .mar-bot_3 {
 	margin-bottom: padding(3);
+}
+
+/** Sticky */
+
+.sticky {
+	position: fixed;
 }

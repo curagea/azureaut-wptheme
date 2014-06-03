@@ -19,6 +19,14 @@
 <body <?php body_class() ?>>
 	<?php if (is_mobile()): ?>
 		<div class="mobile-header">
-			<h2>Azure Autonomie</h2>
+			<div class="content sticky">
+				<h2 class="grid-100"><a href="#" class="toggle">Click!</a> Azure Autonomie</h2>
+				<ul class="surprise-menu grid-100">
+					<li><a href="/journal">Journal</a></li>
+					<li><a href="/pastime">Pastime</a></li>
+					<li><a href="/portfolio">Portfolio</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+			</div> <!-- end .sticky -->
 		</div>
 	<?php endif; ?>
