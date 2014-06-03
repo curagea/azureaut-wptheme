@@ -1,4 +1,3 @@
-<? if (!is_mobile()): ?>
 <div class="sidebar">
 	<div class="content sticky">
 		<h2>Azure Autonomie</h2>
@@ -38,5 +37,3 @@
 	</footer>
 
 </div>
-
-<?php endif; ?>

@@ -6,7 +6,6 @@
 .mobile-header {
 
 	.content {
-		@extend %grid-columns-all;
 		width: 100%;
 		background: $light-gray-blue;
 
@@ -57,5 +56,5 @@
 }
 
 footer {
-	margin-top: padding(5);
+	margin: padding(5) 0;
 }

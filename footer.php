@@ -1,13 +1,16 @@
 	</div> <!-- end .main-content -->
-	<?php get_sidebar(); ?>
+	<?php
+		if (!is_mobile()) {
+			get_sidebar();
+		}
 
+		if (is_mobile()) {
+			get_template_part('mobile-footer');
+		}
+	?>
 </div> <!-- end .wrapper -->
 
-<?php 
-	if (is_mobile()) {
-		get_template_part('mobile-footer');
-	}
-
+<?php
 	wp_reset_query();
 	wp_footer();
 ?>

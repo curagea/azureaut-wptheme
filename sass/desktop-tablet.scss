@@ -27,19 +27,6 @@
 		footer {
 			position: fixed;
 			bottom: padding(2);
-			min-height: 72px;
-			width: 300px;
-			background: {
-				image: url(../images/copyright.png);
-				repeat: no-repeat;
-				size: contain;
-			}
-
-			span {
-				position: relative;
-				left: 105px;
-				top: 15px;
-			}
 		}
 
 		.sub-menu {

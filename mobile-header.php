@@ -1,5 +1,5 @@
 <div class="mobile-header">
-	<div class="content sticky">
+	<div class="content sticky grid-container">
 		<h2 class="grid-100"><a href="#" class="toggle">Click!</a> Azure Autonomie</h2>
 		<ul class="surprise-menu grid-100">
 			<li><a href="/journal"><i class="journal"></i><span>Journal</span></a></li>

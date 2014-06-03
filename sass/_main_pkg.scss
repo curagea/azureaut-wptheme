@@ -32,3 +32,19 @@ a {
 	}
 
 }
+
+.cute-footer {
+	width: 300px;
+	height: 72px;
+	background: {
+		image: url(../images/copyright.png);
+		repeat: no-repeat;
+		size: contain;
+	}
+
+	p {
+		position: relative;
+		left: 105px;
+		top: 15px;
+	}
+}
