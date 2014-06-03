@@ -4,11 +4,11 @@ $unsemantic-ie7-support: false;
 $media-mobile-max: 767px;
 $media-desktop-min: 768px;
 
-@import "sass/unsemantic/assets/sass/partials/reset";
-@import "sass/unsemantic/assets/sass/partials/unsemantic-ie-snap";
-@import "sass/unsemantic/assets/sass/partials/unsemantic-grid-responsive-tablet";
+@import "unsemantic/reset";
+@import "unsemantic/unsemantic-ie-snap";
+@import "unsemantic/unsemantic-grid-responsive-tablet";
 
-@import "unsemantic/assets/sass/partials/unsemantic-vars";
+@import "unsemantic/unsemantic-vars";
 @include unsemantic-grid-placeholders;
 
 @import "sass/bourbon/bourbon";
