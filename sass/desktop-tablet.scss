@@ -3,10 +3,6 @@
 @import "main_pkg";
 
 
-body {
-	@include linear-gradient(90deg, #fff 50%, $light-gray-blue 50.1%);
-}
-
 .wrapper {
 	@extend %grid-container;
 	height: 100%;
@@ -24,13 +20,26 @@ body {
 
 	.sidebar {
 		@extend %grid-33;
-		background: $light-gray-blue;
+		@include linear-gradient(90deg, #f0f0f0 20%, #fff);
 		padding-left: padding(2);
 		position: relative;
 
 		footer {
 			position: fixed;
-			bottom: 0;
+			bottom: padding(2);
+			min-height: 72px;
+			width: 300px;
+			background: {
+				image: url(../images/copyright.png);
+				repeat: no-repeat;
+				size: contain;
+			}
+
+			span {
+				position: relative;
+				left: 105px;
+				top: 15px;
+			}
 		}
 
 		.sub-menu {

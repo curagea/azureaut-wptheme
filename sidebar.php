@@ -31,12 +31,12 @@
 				</li>
 			</ul>
 		</nav>
-
-		<footer>
-			<?php get_template_part('copyright') ?>
-		</footer>
-
 	</div>
+
+	<footer>
+		<?php get_template_part('copyright') ?>
+	</footer>
+
 </div>
 
 <?php endif; ?>

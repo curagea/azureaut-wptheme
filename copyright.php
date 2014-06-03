@@ -1,1 +1,1 @@
-<p>&copy; <?php echo date("Y") ?> Hannah Hu</p>
+<span>&copy; <?php echo date("Y") ?> Hannah Hu</span>
