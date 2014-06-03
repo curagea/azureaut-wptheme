@@ -1,0 +1,61 @@
+/** Mobile stylesheet for the whole site except front page */
+
+@import "main_pkg";
+
+
+.mobile-header {
+
+	.content {
+		@extend %grid-columns-all;
+		width: 100%;
+		background: $light-gray-blue;
+
+		.surprise-menu {
+			display: none;
+
+			li {
+				margin: padding(1) 0;
+			}
+
+			a {
+				@include font-size(2);
+
+				i {
+					height: 64px;
+					width: 64px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: padding(2);
+					background-repeat: no-repeat;
+
+					&.journal {
+						background-image: url(../images/journal-icon_64x64.png);
+					}
+					&.pastime {
+						background-image: url(../images/pastime-icon_64x64.png);
+					}
+					&.portfolio {
+						background-image: url(../images/portfolio-icon_64x64.png);
+					}
+					&.about {
+						background-image: url(../images/bio-icon_64x64.png);
+					}
+				}
+			}
+		}
+	}
+}
+
+.wrapper {
+	@extend %grid-container;
+
+	.main-content {
+		@extend %grid-columns-all;
+		@extend %grid-100;
+		padding-top: 2.5 * 1.35 + em;
+	}
+}
+
+footer {
+	margin-top: padding(5);
+}

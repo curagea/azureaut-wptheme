@@ -1,11 +1,15 @@
-<?php if (is_mobile()): ?>
-	<footer class="grid-container">
-		<div class="grid-100">
-			<?php get_template_part('copyright') ?>
-		</div>
-	</footer>
-<?php endif; ?>
+	</div> <!-- end .main-content -->
+	<?php get_sidebar(); ?>
 
-<?php wp_footer() ?>
+</div> <!-- end .wrapper -->
+
+<?php 
+	if (is_mobile()) {
+		get_template_part('mobile-footer');
+	}
+
+	wp_reset_query();
+	wp_footer();
+?>
 </body>
 </html>

@@ -9,24 +9,22 @@
 
 	<?php if (is_front_page()): ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/frontpage.css">
+	<?php elseif (is_mobile()): ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/mobile.css">
 	<?php else: ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/main.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/desktop-tablet.css">
 	<?php endif; ?>
+
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class() ?>>
-	<?php if (is_mobile()): ?>
-		<div class="mobile-header">
-			<div class="content sticky">
-				<h2 class="grid-100"><a href="#" class="toggle">Click!</a> Azure Autonomie</h2>
-				<ul class="surprise-menu grid-100">
-					<li><a href="/journal">Journal</a></li>
-					<li><a href="/pastime">Pastime</a></li>
-					<li><a href="/portfolio">Portfolio</a></li>
-					<li><a href="/about">About</a></li>
-				</ul>
-			</div> <!-- end .sticky -->
-		</div>
-	<?php endif; ?>
+	<?php
+		if (is_mobile()) {
+			get_template_part('mobile-header');
+		}
+	?>
+
+<div class="wrapper">
+	<div class="main-content">

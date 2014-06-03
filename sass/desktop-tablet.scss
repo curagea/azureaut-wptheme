@@ -1,0 +1,40 @@
+/** Desktop and tablet CSS for the entire site except the frontpage */
+
+@import "main_pkg";
+
+
+body {
+	@include linear-gradient(90deg, #fff 50%, $light-gray-blue 50.1%);
+}
+
+.wrapper {
+	@extend %grid-container;
+	height: 100%;
+
+	.main-content,
+	.sidebar {
+		@extend %grid-columns-all;
+		height: 100%;
+	}
+
+	.main-content {
+		@extend %grid-66;
+		background: #fff;
+	}
+
+	.sidebar {
+		@extend %grid-33;
+		background: $light-gray-blue;
+		padding-left: padding(2);
+		position: relative;
+
+		footer {
+			position: fixed;
+			bottom: 0;
+		}
+
+		.sub-menu {
+			margin-left: padding(2);
+		}
+	}
+}
