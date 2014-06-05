@@ -3,9 +3,10 @@
  */
 
 @import "helpers";
+@import url(http://fonts.googleapis.com/css?family=Ek+Mukta:700|Cardo);
 
 body {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Cardo', Arial, serif;
 	line-height: 1.35;
 	color: #444;
 
@@ -15,8 +16,15 @@ body {
 	}
 }
 
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Ek Mukta', sans-serif;
+}
+
 h1 {
-	@include font-size(3);
+	@include font-size(3.5);
 }
 
 h2 {
@@ -33,4 +41,8 @@ h4 {
 
 p {
 	margin-bottom: padding(2);
+}
+
+.sans-serif {
+	font-family: 'Ek Mukta', sans-serif;
 }

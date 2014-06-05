@@ -32,7 +32,7 @@
 		</nav>
 	</div>
 
-	<footer>
+	<footer class="sans-serif">
 		<?php get_template_part('copyright') ?>
 	</footer>
 
