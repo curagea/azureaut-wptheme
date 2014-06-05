@@ -1,8 +1,6 @@
 /** The packaging */
 
 $unsemantic-ie7-support: false;
-$media-mobile-max: 767px;
-$media-desktop-min: 768px;
 
 @import "unsemantic/reset";
 @import "unsemantic/unsemantic-ie-snap";
@@ -11,40 +9,32 @@ $media-desktop-min: 768px;
 @import "unsemantic/unsemantic-vars";
 @include unsemantic-grid-placeholders;
 
-@import "sass/bourbon/bourbon";
+@import "bourbon/bourbon";
 
-@import "sass/typography";
-@import "sass/helpers";
-@import "sass/layout";
-@import "sass/colors";
+@import "typography";
+@import "helpers";
+@import "layout";
+@import "colors";
 
 
 a {
 	color: $mid-blue;
 
-  &:visited {
-    color: $dark-gray-blue;
-  }
+	&:visited {
+		color: $dark-gray-blue;
+	}
 
 	&:hover,
-  &:focus {
+	&:focus {
 		color: $light-blue;
 	}
 
 }
 
-.cute-footer {
-	width: 300px;
-	height: 72px;
-	background: {
-		image: url(../images/copyright.png);
-		repeat: no-repeat;
-		size: contain;
-	}
+.wrapper {
+	@extend %grid-container;
 
-	p {
-		position: relative;
-		left: 105px;
-		top: 15px;
+	.main-content {
+		@extend %grid-columns-all;
 	}
 }

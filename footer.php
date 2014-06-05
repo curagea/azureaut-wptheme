@@ -4,7 +4,7 @@
 			get_sidebar();
 		}
 
-		if (is_mobile()) {
+		if (is_mobile() and !is_front_page()) {
 			get_template_part('mobile-footer');
 		}
 	?>

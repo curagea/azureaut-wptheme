@@ -10,9 +10,9 @@ function hookToggleHeaderMenu() {
 		} else {
 			menu.slideUp();
 		}
-	}); 
+	});
 }
 
 $j(document).ready(function() {
-	hookToggleHeaderMenu();
+	//hookToggleHeaderMenu();
 });

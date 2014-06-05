@@ -7,11 +7,13 @@
 	<link rel="shortcut icon" href="/favicon.gif" type="image/x-icon" />
 	<title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
 
+	<?php if (is_mobile()): ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/mobile.css">
+	<?php endif; ?>
+
 	<?php if (is_front_page()): ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/frontpage.css">
-	<?php elseif (is_mobile()): ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/mobile.css">
-	<?php else: ?>
+	<?php elseif (!is_mobile()): ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/desktop-tablet.css">
 	<?php endif; ?>
 
@@ -20,11 +22,11 @@
 </head>
 
 <body <?php body_class() ?>>
+
+<div class="wrapper">
 	<?php
-		if (is_mobile()) {
+		if (is_mobile() and !is_front_page()) {
 			get_template_part('mobile-header');
 		}
 	?>
-
-<div class="wrapper">
 	<div class="main-content">

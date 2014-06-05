@@ -1,15 +1,14 @@
 /** Desktop and tablet CSS for the entire site except the frontpage */
 
 @import "main_pkg";
+@import "components";
 
 
 .wrapper {
-	@extend %grid-container;
 	height: 100%;
 
 	.main-content,
 	.sidebar {
-		@extend %grid-columns-all;
 		height: 100%;
 	}
 
@@ -19,6 +18,7 @@
 	}
 
 	.sidebar {
+		@extend %grid-columns-all;
 		@extend %grid-33;
 		@include linear-gradient(90deg, #f0f0f0 20%, #fff);
 		padding-left: padding(2);
@@ -27,6 +27,10 @@
 		footer {
 			position: fixed;
 			bottom: padding(2);
+
+			.cute-footer {
+				width: 300px;
+			}
 		}
 
 		.sub-menu {

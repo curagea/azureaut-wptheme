@@ -8,6 +8,11 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	line-height: 1.35;
 	color: #444;
+
+	&.mobile {
+		-webkit-text-size-adjust: 100%;
+		font-size: 2em;
+	}
 }
 
 h1 {

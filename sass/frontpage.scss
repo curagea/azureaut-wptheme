@@ -2,55 +2,19 @@
  * Frontpage CSS
  */
 $unsemantic-ie7-support: false;
-$container-max-width: 768px;
 
 @import "main_pkg";
+@import "components";
 
+.desktop .wrapper,
+.tablet .wrapper {
+	max-width: 768px;
+}
 
 .frontpage {
-	// extend grid-container to use special container-max-width
-	@extend %grid-container;
-	text-align: center;
 	// Explicit about -top and -bottom to avoid overriding grid-container's padding
 	padding-top: padding(5);
 	padding-bottom: padding(5);
-
-	nav li {
-		@extend %grid-columns-all;
-		margin-bottom: padding(3);
-
-		a {
-			display: block;
-			position: relative;
-
-			&:before {
-				content: "";
-				background: {
-					repeat: no-repeat;
-					size: 65%;
-					position: center;
-					color: $light-blue;
-				}
-				border-radius: 50%;
-			}
-
-			&.journal:before {
-				background-image: url(../images/journal-icon.png);
-			}
-
-			&.pastime:before {
-				background-image: url(../images/pastime-icon.png);
-			}
-
-			&.portfolio:before {
-				background-image: url(../images/portfolio-icon.png);
-			}
-
-			&.about:before {
-				background-image: url(../images/bio-icon.png);
-			}
-		}
-	}
 
 	.welcome-image {
 		margin: 0 auto padding(1);
@@ -61,14 +25,16 @@ $container-max-width: 768px;
 		}
 	}
 
-	.intro {
-		font-size: 1.5em;
+	section {
+		.intro {
+			@include font-size(1.5);
+		}
 	}
 }
 
 .desktop .frontpage,
 .tablet .frontpage {
-	nav li {
+	.circley-menu li {
 		@extend %grid-25;
 
 		a {
@@ -87,10 +53,19 @@ $container-max-width: 768px;
 			}
 		}
 	}
+
+	.cute-footer {
+		margin: 0 auto;
+		max-width: 420px;
+
+		p {
+			top: 13%;
+		}
+	}
 }
 
 .desktop .frontpage {
-	nav li {
+	.circley-menu li {
 
 		a {
 
@@ -122,29 +97,6 @@ $container-max-width: 768px;
 			&:hover span,
 			&:focus span {
 				opacity: 1;
-			}
-		}
-	}
-}
-
-.mobile .frontpage {
-	nav li {
-		@extend %grid-100;
-		text-align: left;
-
-		a {
-
-			&:before {
-				@include fluid-square(30%, inline-block);
-				vertical-align: middle;
-			}
-
-			span {
-				@include font-size(2);
-				display: inline-block;
-				vertical-align: middle;
-				margin-left: padding(3);
-				text-decoration: underline;
 			}
 		}
 	}
