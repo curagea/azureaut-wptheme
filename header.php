@@ -2,6 +2,21 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+	<script type="text/javascript">
+		WebFontConfig = {
+			google: { families: [ 'Ek+Mukta:700:latin', 'Cardo::latin' ] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
+
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<link rel="icon" href="/favicon.gif" type="image/x-icon" />
 	<link rel="shortcut icon" href="/favicon.gif" type="image/x-icon" />
@@ -18,6 +33,10 @@
 	<?php endif; ?>
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<style type="text/css">
+		.wf-loading {visibility: hidden;}
+		.wf-active, .wf-inactive {visibility: visible;}
+	</style>
 	<?php wp_head(); ?>
 </head>
 
