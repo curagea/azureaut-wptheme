@@ -33,10 +33,6 @@
 	<?php endif; ?>
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<style type="text/css">
-		.wf-loading {visibility: hidden;}
-		.wf-active, .wf-inactive {visibility: visible;}
-	</style>
 	<?php wp_head(); ?>
 </head>
 

@@ -17,6 +17,20 @@ $unsemantic-ie7-support: false;
 @import "colors";
 
 
+/** Dealing with FOUT and web fonts */
+
+html,
+.wf-loading {
+	visibility: hidden;
+	opacity: 0;
+	@include transition(all 0.3s);
+}
+.wf-active,
+.wf-inactive {
+	opacity: 1;
+	visibility: visible;
+}
+
 a {
 	color: $mid-blue;
 
@@ -38,3 +52,4 @@ a {
 		@extend %grid-columns-all;
 	}
 }
+
