@@ -38,3 +38,13 @@
 		}
 	}
 }
+
+.chunk {
+	@extend %clearfix;
+
+	.chunk-img {
+		float: left;
+		display: block;
+		margin: 0 padding(1) padding(1) 0;
+	}
+}
