@@ -37,7 +37,7 @@ function main_nav() {
 */
 function do_heading() {
 	$output = "";
-	
+
 	if(is_home()) $output .= "<h1 id='site-title'>"; else  $output .= "<h4 id='site-title'>";
 
 	$output .= "<a href='"  . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a>";
@@ -58,7 +58,7 @@ if ( function_exists('register_sidebar') ) {
 	register_sidebar(array('name'=>'about'));
 	register_sidebar(array('name'=>'pastime'));
 	register_sidebar(array(
-		'name'=>'twitter-box', 
+		'name'=>'twitter-box',
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '',
@@ -67,17 +67,17 @@ if ( function_exists('register_sidebar') ) {
 
 /**
 * Check to see if this page will paginate
-* 
+*
 * @return boolean
 */
 function will_paginate() {
 	global $wp_query;
-	
-	if ( !is_singular() ) 
+
+	if ( !is_singular() )
 	{
 		$max_num_pages = $wp_query->max_num_pages;
-		
-		if ( $max_num_pages > 1 ) 
+
+		if ( $max_num_pages > 1 )
 		{
 			return true;
 		}
@@ -152,6 +152,8 @@ function init_jquery() {
 	}
 }
 add_action( 'init', 'init_jquery' );
+
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 // Hook into the 'after_setup_theme' action
 add_action( 'after_setup_theme', 'custom_theme_features' );

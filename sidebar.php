@@ -30,6 +30,10 @@
 				</li>
 			</ul>
 		</nav>
+
+		<div class="search-form">
+			<?php get_search_form(); ?>
+		</div>
 	</div>
 
 	<footer class="sans-serif">

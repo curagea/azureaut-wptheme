@@ -36,3 +36,8 @@
 .text-centered {
 	text-align: center;
 }
+
+/** Offscreen */
+.screen-reader-text {
+	@include offscreen();
+}
