@@ -35,6 +35,7 @@
 		}
 
 		.sub-menu {
+			@include reset-list;
 			margin-left: padding(2);
 		}
 	}

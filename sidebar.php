@@ -3,7 +3,7 @@
 		<h3>Azure Autonomie</h3>
 
 		<nav class="main-menu">
-			<ul>
+			<ul class="reset-list">
 				<li>
 					<h4>Journal</h4>
 					<ul class="sub-menu">

@@ -46,3 +46,23 @@
 .sticky {
 	position: fixed;
 }
+
+/** Reseted lists */
+@mixin reset-list {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	list-style: none;
+
+	li {
+		display: list-item;
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.reset-list {
+	@include reset-list;
+}

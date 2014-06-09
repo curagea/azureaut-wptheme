@@ -6,6 +6,10 @@
 
 .main-content {
 	@extend %grid-100;
+
+	.pagination {
+		margin-bottom: padding(2);
+	}
 }
 
 .circley-menu li {

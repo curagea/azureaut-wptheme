@@ -1,3 +1,3 @@
 <div class="cute-footer">
-	<p>&copy; <?php echo date("Y") ?> Hannah Hu</span>
+	<span>&copy; <?php echo date("Y") ?> Hannah Hu</span>
 </div>

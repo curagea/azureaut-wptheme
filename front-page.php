@@ -17,7 +17,7 @@
 	</section>
 
 	<nav class="circley-menu sans-serif">
-		<ul class="text-centered">
+		<ul class="text-centered reset-list">
 			<li><a href="<?php echo page_link('journal') ?>" class="journal"><span>Journal</span></a></li>
 			<li><a href="<?php echo page_link('pastime') ?>" class="pastime"><span>Pastime</span></a></li>
 			<li><a href="<?php echo page_link('portfolio') ?>" class="portfolio"><span>Portfolio</span></a></li>

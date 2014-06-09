@@ -2,7 +2,7 @@
 
 $unsemantic-ie7-support: false;
 
-@import "unsemantic/reset";
+@import "normalize";
 @import "unsemantic/unsemantic-ie-snap";
 @import "unsemantic/unsemantic-grid-responsive-tablet";
 
@@ -53,3 +53,14 @@ a {
 	}
 }
 
+.chunk {
+	margin-bottom: padding(4);
+
+	.date {
+		font-style: italic;
+	}
+}
+
+.pagination {
+	padding-top: padding(5);
+}
