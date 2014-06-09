@@ -10,7 +10,7 @@
 // Circley menu
 .circley-menu li {
 	@extend %grid-columns-all;
-	margin-bottom: padding(3);
+	margin-bottom: padding(2);
 
 	a {
 		display: block;
@@ -49,16 +49,21 @@
 .cute-footer {
 	position: relative;
 	width: 100%;
-	padding-bottom: 93 / 420 * 100%;
 	background: {
 		image: url(../images/copyright.png);
 		repeat: no-repeat;
 		size: contain;
 	}
 
+	&:before {
+		content: '';
+		display: block;
+		padding-bottom: 93 / 420 * 100%;
+	}
+
 	p {
 		position: absolute;
 		left: 35%;
-		top: 15%;
+		top: 10%;
 	}
 }

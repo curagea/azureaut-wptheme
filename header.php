@@ -6,7 +6,7 @@
 <script>
   WebFont.load({
     google: {
-      families: ['Ek+Mukta:700:latin', 'Cardo::latin']
+      families: ['Merriweather+Sans:700:latin', 'Merriweather::latin']
     }
   });
 </script>

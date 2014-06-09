@@ -1,14 +1,14 @@
 <?php
 	get_header();
 ?>
-<h2>Journal<? if (is_month()):?> &mdash; <? the_time('F Y'); endif; ?></h2>
+<h1>Journal<? if (is_month()):?> &mdash; <? the_time('F Y'); endif; ?></h1>
 <?
 	if (have_posts()):
 		while (have_posts()) : the_post();
 ?>
 	<div class="chunk" id="post-<?php the_ID(); ?>">
 
-		<h3 class="postTitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+		<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<span class="meta date">Published: <?php the_date(); ?></span>
 		<span class="meta tags"><? the_tags('') ?></span>
 		<div class="description"><?php the_excerpt(); ?></div>

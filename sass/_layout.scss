@@ -41,3 +41,8 @@
 .screen-reader-text {
 	@include offscreen();
 }
+
+/** Sticky */
+.sticky {
+	position: fixed;
+}

@@ -26,3 +26,8 @@
 	height: 1px;
 	overflow: hidden;
 }
+
+@mixin equal-heights($padding-bottom: 0) {
+	padding-bottom: 9999px + $padding-bottom;
+	margin-bottom: -9999px;
+}

@@ -10,7 +10,7 @@
 		while (have_posts()) : the_post();
 ?>
 	<div class="chunk" id="post-<?php the_ID(); ?>">
-		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+		<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<? echo get_image('thumbnail'); ?>
 		<span class="meta date">
 			<?= get('project-start') . ' &mdash; ' . get('project-end'); ?></span>

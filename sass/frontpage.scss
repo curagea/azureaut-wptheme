@@ -13,8 +13,8 @@ $unsemantic-ie7-support: false;
 
 .frontpage {
 	// Explicit about -top and -bottom to avoid overriding grid-container's padding
-	padding-top: padding(5);
-	padding-bottom: padding(5);
+	padding-top: padding(2);
+	padding-bottom: padding(2);
 
 	.welcome-image {
 		margin: 0 auto padding(1);
@@ -25,10 +25,8 @@ $unsemantic-ie7-support: false;
 		}
 	}
 
-	section {
-		.intro {
-			@include font-size(1.5);
-		}
+	.intro {
+		@include font-size(1.6);
 	}
 }
 
@@ -46,10 +44,7 @@ $unsemantic-ie7-support: false;
 			span {
 				@include font-size(1.25);
 				display: block;
-				position: relative;
-				top: 100%;
-				margin: 0 auto;
-				padding-top: padding(0.5);
+				padding-top: padding(1);
 			}
 		}
 	}
@@ -57,10 +52,6 @@ $unsemantic-ie7-support: false;
 	.cute-footer {
 		margin: 0 auto;
 		max-width: 420px;
-
-		p {
-			top: 13%;
-		}
 	}
 }
 

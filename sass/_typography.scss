@@ -6,7 +6,7 @@
 
 
 body {
-	font-family: 'Cardo', Arial, serif;
+	font-family: 'Merriweather', Arial, serif;
 	line-height: 1.35;
 	color: #444;
 
@@ -19,30 +19,27 @@ body {
 h1,
 h2,
 h3,
-h4 {
-	font-family: 'Ek Mukta', sans-serif;
+h4,
+.sans-serif {
+	font-family: 'Merriweather Sans', sans-serif;
 }
 
 h1 {
-	@include font-size(3.5);
+	@include font-size(3);
 }
 
 h2 {
-	@include font-size(2.5);
-}
-
-h3 {
 	@include font-size(2);
 }
 
-h4 {
+h3 {
 	@include font-size(1.5);
 }
 
-p {
-	margin-bottom: padding(2);
+h4 {
+	@include font-size(1.25);
 }
 
-.sans-serif {
-	font-family: 'Ek Mukta', sans-serif;
+p {
+	margin-bottom: 1em;
 }

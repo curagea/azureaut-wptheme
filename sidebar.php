@@ -1,6 +1,6 @@
 <div class="sidebar">
 	<div class="content sticky">
-		<h2>Azure Autonomie</h2>
+		<h3>Azure Autonomie</h3>
 
 		<nav class="main-menu">
 			<ul>
@@ -36,7 +36,7 @@
 		</div>
 	</div>
 
-	<footer class="sans-serif">
+	<footer class="sans-serif sticky">
 		<?php get_template_part('copyright') ?>
 	</footer>
 

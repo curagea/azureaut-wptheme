@@ -5,11 +5,14 @@
 
 
 .wrapper {
-	height: 100%;
+	// Contain the equal-columns hack
+	overflow: hidden;
+	min-height: 100%;
 
 	.main-content,
 	.sidebar {
-		height: 100%;
+		@include equal-heights($padding-bottom: padding(2));
+		padding-top: padding(2);
 	}
 
 	.main-content {
@@ -21,11 +24,9 @@
 		@extend %grid-columns-all;
 		@extend %grid-33;
 		@include linear-gradient(90deg, #f0f0f0 20%, #fff);
-		padding-left: padding(2);
 		position: relative;
 
 		footer {
-			position: fixed;
 			bottom: padding(2);
 
 			.cute-footer {
