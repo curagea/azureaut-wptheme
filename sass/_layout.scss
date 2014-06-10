@@ -1,27 +1,26 @@
 /** Layout */
 
-@import "unsemantic/unsemantic-vars";
 @import "helpers";
-@include unsemantic-grid-placeholders;
 
 
 /** Grid */
 
 .grid-parent {
-	@extend %grid-parent;
-	@extend %clearfix;
+	@include row();
 }
 
 .grid-100 {
-	@extend %grid-columns-all;
-	@extend %grid-100;
+	@include span-columns(12);
 }
 
 .grid-container {
-	@extend %grid-container;
+	@include outer-container;
 }
 
 /** Spacing */
+.mar-bot_1 {
+	margin-bottom: padding(1);
+}
 
 .mar-bot_2 {
 	margin-bottom: padding(2);

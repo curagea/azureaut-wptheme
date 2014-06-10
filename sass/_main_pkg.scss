@@ -3,13 +3,9 @@
 $unsemantic-ie7-support: false;
 
 @import "normalize";
-@import "unsemantic/unsemantic-ie-snap";
-@import "unsemantic/unsemantic-grid-responsive-tablet";
-
-@import "unsemantic/unsemantic-vars";
-@include unsemantic-grid-placeholders;
 
 @import "bourbon/bourbon";
+@import "neat/neat";
 
 @import "typography";
 @import "helpers";
@@ -46,15 +42,11 @@ a {
 }
 
 .wrapper {
-	@extend %grid-container;
-
-	.main-content {
-		@extend %grid-columns-all;
-	}
+	@include outer-container;
 }
 
 .chunk {
-	margin-bottom: padding(4);
+	margin-bottom: padding(2);
 
 	.date {
 		font-style: italic;
@@ -62,5 +54,5 @@ a {
 }
 
 .pagination {
-	padding-top: padding(5);
+	padding-top: padding(1);
 }

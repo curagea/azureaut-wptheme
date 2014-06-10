@@ -4,42 +4,50 @@
 @import "components";
 
 
+.mobile-header {
+	@include pad();
+}
+
 .main-content {
-	@extend %grid-100;
+	@include pad();
 
 	.pagination {
 		margin-bottom: padding(2);
 	}
 }
 
-.circley-menu li {
-	@extend %grid-100;
-	text-align: left;
+.circley-menu {
+	@include pad();
 
-	a {
-		&:before {
-			@include fluid-square(25%, inline-block);
-			vertical-align: middle;
-		}
+	li {
+		text-align: left;
 
-		span {
-			@include font-size(1.5);
-			display: inline-block;
-			vertical-align: middle;
-			margin-left: padding(3);
-			text-decoration: underline;
+		a {
+			&:before {
+				@include fluid-square(25%, inline-block);
+				vertical-align: middle;
+			}
+
+			span {
+				@include font-size(1.5);
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: padding(1);
+				text-decoration: underline;
+			}
 		}
 	}
 }
 
 footer {
-	margin-bottom: padding(5);
+	@include pad();
+	margin-bottom: padding(1);
 }
 
 .cute-footer {
 	@include font-size(1.5);
 
-	p {
+	span {
 		top: 13%;
 	}
 }

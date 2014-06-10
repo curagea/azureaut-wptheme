@@ -9,7 +9,7 @@
 	</div>
 	<section class="text-centered">
 		<h1>Oh hi!</h1>
-		<p class="intro mar-bot_2">
+		<p class="intro mar-bot_1">
 			I&rsquo;m Hannah, and welcome to my site. It has a name, &ldquo;Azure
 			Autonomie&rdquo;, for reasons. Feel free to explore and discover here, and
 			who knows - you might learn a thing or two <a href="/about">about me</a>.

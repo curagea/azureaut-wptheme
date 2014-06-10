@@ -9,8 +9,7 @@
 
 // Circley menu
 .circley-menu li {
-	@extend %grid-columns-all;
-	margin-bottom: padding(2);
+	margin-bottom: padding(1);
 
 	a {
 		display: block;

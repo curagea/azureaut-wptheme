@@ -1,10 +1,10 @@
 /** Helpers */
 
-@import "unsemantic/unsemantic-vars";
+@import "neat/settings/grid";
 
 
 @function padding($n) {
-	@return $n * $gutter-half;
+	@return $n * $gutter;
 }
 
 @mixin font-size($n) {
@@ -28,6 +28,6 @@
 }
 
 @mixin equal-heights($padding-bottom: 0) {
-	padding-bottom: 9999px + $padding-bottom;
-	margin-bottom: -9999px;
+	padding-bottom: 9999em + $padding-bottom;
+	margin-bottom: -9999em;
 }

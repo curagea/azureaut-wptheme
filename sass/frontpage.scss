@@ -12,9 +12,7 @@ $unsemantic-ie7-support: false;
 }
 
 .frontpage {
-	// Explicit about -top and -bottom to avoid overriding grid-container's padding
-	padding-top: padding(2);
-	padding-bottom: padding(2);
+	@include pad();
 
 	.welcome-image {
 		margin: 0 auto padding(1);
@@ -33,7 +31,7 @@ $unsemantic-ie7-support: false;
 .desktop .frontpage,
 .tablet .frontpage {
 	.circley-menu li {
-		@extend %grid-25;
+		@include span-columns(3);
 
 		a {
 
@@ -44,7 +42,7 @@ $unsemantic-ie7-support: false;
 			span {
 				@include font-size(1.25);
 				display: block;
-				padding-top: padding(1);
+				padding-top: padding(0.5);
 			}
 		}
 	}
@@ -52,6 +50,7 @@ $unsemantic-ie7-support: false;
 	.cute-footer {
 		margin: 0 auto;
 		max-width: 420px;
+		margin-bottom: padding(1);
 	}
 }
 
@@ -70,8 +69,8 @@ $unsemantic-ie7-support: false;
 			&:hover:before,
 			&:focus:before {
 				opacity: 1;
-				top: -1 * padding(1);
-				box-shadow: 0 padding(1) hsl(0, 0, 50);
+				top: -1 * padding(0.5);
+				box-shadow: 0 padding(0.5) hsl(0, 0, 50);
 			}
 
 			&:active:before {
