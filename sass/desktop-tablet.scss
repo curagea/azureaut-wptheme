@@ -11,6 +11,7 @@
 
 	.main-content,
 	.sidebar {
+		@include pad();
 		@include equal-heights($padding-bottom: padding(1));
 	}
 
@@ -21,8 +22,6 @@
 
 	.sidebar {
 		@include span-columns(4);
-		padding-left: padding(1);
-		padding-right: padding(1);
 		@include linear-gradient(90deg, #f0f0f0 20%, #fff);
 		position: relative;
 
