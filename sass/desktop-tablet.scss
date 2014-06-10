@@ -26,7 +26,9 @@
 		position: relative;
 
 		footer {
-			bottom: padding(1);
+			@include linear-gradient(90deg, #f0f0f0 20%, #fff);
+			bottom: 0;
+			padding-bottom: padding(1);
 
 			.cute-footer {
 				width: 300px;
