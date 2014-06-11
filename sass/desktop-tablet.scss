@@ -6,7 +6,7 @@
 
 .wrapper {
 	// Contain the equal-columns hack
-	overflow: hidden;
+	@include clearfix;
 	min-height: 100%;
 
 	.main-content,
@@ -37,7 +37,8 @@
 
 		.sub-menu {
 			@include reset-list;
-			margin-left: padding(1);
+			margin-left: padding(0.5);
+			margin-bottom: padding(1);
 		}
 	}
 }

@@ -10,6 +10,7 @@
 }
 
 .grid-100 {
+	@include pad();
 	@include span-columns(12);
 }
 

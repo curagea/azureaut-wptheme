@@ -4,13 +4,7 @@
 @import "components";
 
 
-.mobile-header {
-	@include pad();
-}
-
 .main-content {
-	@include pad();
-
 	.pagination {
 		margin-bottom: padding(2);
 	}
@@ -40,7 +34,6 @@
 }
 
 footer {
-	@include pad();
 	margin-bottom: padding(1);
 }
 

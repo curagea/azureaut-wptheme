@@ -96,14 +96,16 @@ function will_paginate() {
  * @uses in_category() Tests against descendant categories
  * @version 2.7
  */
-function post_is_in_descendant_category( $cats, $_post = null ) {
-	foreach ( (array) $cats as $cat ) {
-		// get_term_children() accepts integer ID only
-		$descendants = get_term_children( (int) $cat, 'category');
-		if ( $descendants && in_category( $descendants, $_post ) )
-			return true;
+if ( ! function_exists( 'post_is_in_descendant_category' ) ) {
+	function post_is_in_descendant_category( $cats, $_post = null ) {
+		foreach ( (array) $cats as $cat ) {
+			// get_term_children() accepts integer ID only
+			$descendants = get_term_children( (int) $cat, 'category' );
+			if ( $descendants && in_category( $descendants, $_post ) )
+				return true;
+		}
+		return false;
 	}
-	return false;
 }
 
 // Register Theme Features
