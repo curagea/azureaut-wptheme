@@ -13,6 +13,11 @@ $unsemantic-ie7-support: false;
 @import "colors";
 
 
+html,
+body {
+	height: 100%;
+}
+
 /** Dealing with FOUT and web fonts */
 
 html,
@@ -57,6 +62,23 @@ a {
 	}
 }
 
-.pagination {
-	padding-top: padding(1);
+.chunk-img {
+	float: left;
+	display: block;
+	margin: 0 padding(0.5) padding(0.5) 0;
+}
+
+
+/** For the Social plugin */
+#social {
+	background: transparent !important;
+
+	.comment-reply-title {
+		font-weight: bold;
+	}
+
+	.avatar {
+		display: block;
+		border-radius: 50%;
+	}
 }

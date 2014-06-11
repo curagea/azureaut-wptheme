@@ -4,6 +4,25 @@
 @import "helpers";
 
 
+.pagination {
+	padding-top: padding(1);
+	@include clearfix;
+
+	li {
+		display: block;
+		float: left;
+
+		&.previous {
+			padding-right: padding(0.5);
+		}
+	}
+
+	.previous:not(:empty) + .future:not(:empty) {
+		padding-left: padding(0.5);
+		border-left: 1px solid #000;
+	}
+}
+
 // Circley menu
 .circley-menu li {
 	margin-bottom: padding(1);

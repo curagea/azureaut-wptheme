@@ -7,6 +7,7 @@
 .wrapper {
 	// Contain the equal-columns hack
 	@include clearfix;
+	overflow: hidden;
 	min-height: 100%;
 
 	.main-content,
@@ -17,7 +18,6 @@
 
 	.main-content {
 		@include span-columns(8);
-		background: #fff;
 	}
 
 	.sidebar {
@@ -27,7 +27,7 @@
 
 		footer {
 			@include linear-gradient(90deg, #f0f0f0 20%, #fff);
-			bottom: 0;
+			bottom: -1 * padding(1);
 			padding-bottom: padding(1);
 
 			.cute-footer {
@@ -45,10 +45,4 @@
 
 .chunk {
 	@include clearfix;
-
-	.chunk-img {
-		float: left;
-		display: block;
-		margin: 0 padding(1) padding(1) 0;
-	}
 }

@@ -8,7 +8,7 @@
 }
 
 @mixin font-size($n) {
-	font-size: $n * 100%;
+	font-size: $n * 1em;
 }
 
 @mixin fluid-square($n, $display: block) {
