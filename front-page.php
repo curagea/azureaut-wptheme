@@ -10,18 +10,34 @@
 	<section class="text-centered">
 		<h1>Oh hi!</h1>
 		<p class="intro mar-bot_1">
-			I&rsquo;m Hannah, and welcome to my site. It has a name, &ldquo;Azure
-			Autonomie&rdquo;, for reasons. Feel free to explore and discover here, and
-			who knows - you might learn a thing or two <a href="/about">about me</a>.
+			I&rsquo;m Hannah, and welcome to my site, mysteriously named &ldquo;Azure
+			Autonomie&rdquo;. Do explore and discover within, and
+			who knows &mdash; you might learn a thing or two <a href="/about">about me</a>.
 		</p>
 	</section>
 
 	<nav class="circley-menu sans-serif">
 		<ul class="text-centered reset-list">
-			<li><a href="<?php echo page_link('journal') ?>" class="journal"><span>Journal</span></a></li>
-			<li><a href="<?php echo page_link('pastime') ?>" class="pastime"><span>Pastime</span></a></li>
-			<li><a href="<?php echo page_link('portfolio') ?>" class="portfolio"><span>Portfolio</span></a></li>
-			<li><a href="<?php echo page_link('about') ?>" class="about"><span>About</span></a></li>
+			<li>
+				<a href="<?php echo page_link('journal') ?>" class="journal">
+					<span>Journal</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo page_link('pastime') ?>" class="pastime">
+					<span>Pastime</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo page_link('portfolio') ?>" class="portfolio">
+					<span>Portfolio</span>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo page_link('about') ?>" class="about">
+					<span>About</span>
+				</a>
+			</li>
 		</ul>
 	</nav>
 	<footer class="grid-100 sans-serif">

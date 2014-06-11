@@ -27,7 +27,7 @@
 
 		footer {
 			@include linear-gradient(90deg, #f0f0f0 20%, #fff);
-			bottom: -1 * padding(1);
+			bottom: 0;
 			padding-bottom: padding(1);
 
 			.cute-footer {

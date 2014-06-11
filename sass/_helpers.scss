@@ -31,3 +31,8 @@
 	padding-bottom: 9999em + $padding-bottom;
 	margin-bottom: -9999em;
 }
+
+@mixin sans-serif {
+	font-family: 'Merriweather Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+}

@@ -24,38 +24,43 @@
 }
 
 // Circley menu
-.circley-menu li {
-	margin-bottom: padding(1);
+.circley-menu {
+	@include pad();
+	@include clearfix;
 
-	a {
-		display: block;
-		position: relative;
+	li {
+		margin-bottom: padding(1);
 
-		&:before {
-			content: "";
-			background: {
-				repeat: no-repeat;
-				size: 65%;
-				position: center;
-				color: $light-gray-blue;
+		a {
+			display: block;
+			position: relative;
+
+			&:before {
+				content: "";
+				background: {
+					repeat: no-repeat;
+					size: 65%;
+					position: center;
+					color: $light-gray-blue;
+				}
+				border-radius: 50%;
 			}
-			border-radius: 50%;
-		}
 
-		&.journal:before {
-			background-image: url(../images/journal-icon.png);
-		}
+			&.journal:before {
+				background-image: url(../images/journal-icon.png);
+			}
 
-		&.pastime:before {
-			background-image: url(../images/pastime-icon.png);
-		}
+			&.pastime:before {
+				background-image: url(../images/pastime-icon.png);
+			}
 
-		&.portfolio:before {
-			background-image: url(../images/portfolio-icon.png);
-		}
+			&.portfolio:before {
+				background-image: url(../images/portfolio-icon.png);
+			}
 
-		&.about:before {
-			background-image: url(../images/about-icon.png);
+			&.about:before {
+				background-image: url(../images/about-icon.png);
+			}
 		}
 	}
 }

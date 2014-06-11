@@ -20,9 +20,8 @@ body {
 h1,
 h2,
 h3,
-h4,
-.sans-serif {
-	font-family: 'Merriweather Sans', sans-serif;
+h4 {
+	@include sans-serif;
 	margin-top: 0;
 	margin-bottom: padding(0.5);
 }
@@ -41,4 +40,12 @@ h3 {
 
 h4 {
 	@include font-size(1.25);
+}
+
+p {
+	margin-top: 0;
+}
+
+.sans-serif {
+	@include sans-serif;
 }
