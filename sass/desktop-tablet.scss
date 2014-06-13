@@ -22,11 +22,10 @@
 
 	.sidebar {
 		@include span-columns(4);
-		@include linear-gradient(90deg, #f0f0f0 20%, #fff);
+		@include linear-gradient(90deg, hsl(0, 0, 95), $off-white padding(0.75));
 		position: relative;
 
 		footer {
-			@include linear-gradient(90deg, #f0f0f0 20%, #fff);
 			bottom: 0;
 			padding-bottom: padding(1);
 

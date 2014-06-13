@@ -2,6 +2,7 @@
  * Typography
  */
 
+@import "colors";
 @import "helpers";
 
 
@@ -9,7 +10,6 @@ body {
 	font-family: 'Merriweather', Arial, serif;
 	line-height: 1.5;
 	color: #444;
-	background-color: #fefefc;
 
 	&.mobile {
 		-webkit-text-size-adjust: 100%;
