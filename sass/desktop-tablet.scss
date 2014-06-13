@@ -34,6 +34,10 @@
 			}
 		}
 
+		.main-menu h4 {
+			margin-bottom: 0;
+		}
+
 		.sub-menu {
 			@include reset-list;
 			margin-left: padding(0.5);
