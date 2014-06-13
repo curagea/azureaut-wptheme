@@ -14,7 +14,16 @@
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<link rel="icon" href="/favicon.gif" type="image/x-icon" />
 	<link rel="shortcut icon" href="/favicon.gif" type="image/x-icon" />
-	<title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
+	<title>
+		<?php
+			if (is_404()){
+				echo 'Can\'t find it! | ';
+			} else {
+				wp_title( '|', true, 'right' );
+			}
+			bloginfo( 'name' );
+		?>
+	</title>
 
 	<?php if (is_mobile()): ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() ?>/css/mobile.css">
