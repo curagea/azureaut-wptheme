@@ -48,6 +48,8 @@
 			</ul>
 		</nav>
 
+		<?php get_template_part('external-links') ?>
+
 		<div class="search-form">
 			<?php get_search_form(); ?>
 		</div>
@@ -59,14 +61,6 @@
 	</div>
 
 	<footer class="sans-serif sticky">
-		<div class="external-links">
-			<a href="#" class="fb"><span>Facebook</span></a>
-			<a href="#" class="flickr"><span>Flickr</span></a>
-			<a href="#" class="github"><span>Github</span></a>
-			<a href="#" class="twitter"><span>Twitter</span></a>
-			<a href="#" class="instagram"><span>Instagram</span></a>
-			<a href="#" class="pinterest"><span>Pinterest</span></a>
-		</div>
 		<?php get_template_part('copyright') ?>
 	</footer>
 

@@ -6,6 +6,9 @@
 		<li><a href="<?php echo page_link('about') ?>" class="about"><span>About</span></a></li>
 	</ul>
 </nav>
+
+<?php get_template_part('external-links') ?>
+
 <footer class="grid-100 sans-serif">
 	<?php get_template_part('copyright') ?>
 </footer>
