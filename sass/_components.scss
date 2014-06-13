@@ -65,6 +65,47 @@
 	}
 }
 
+.external-links {
+	margin-bottom: padding(0.5);
+
+	a {
+		opacity: 0.7;
+		@include transition(all 0.3s);
+
+		&:hover {
+			opacity: 1;
+		}
+
+		span {
+			@include offscreen;
+		}
+
+		&.fb {
+			@include icon(1, 32);
+		}
+
+		&.flickr {
+			@include icon(2, 32);
+		}
+
+		&.twitter {
+			@include icon(3, 32);
+		}
+
+		&.github {
+			@include icon(4, 32);
+		}
+
+		&.pinterest {
+			@include icon(5, 32);
+		}
+
+		&.instagram {
+			@include icon(6, 32);
+		}
+	}
+}
+
 // Cute footer
 .cute-footer {
 	position: relative;

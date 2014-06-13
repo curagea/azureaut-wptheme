@@ -36,3 +36,28 @@
 	font-family: 'Merriweather Sans', sans-serif;
 	text-rendering: optimizeLegibility;
 }
+
+@mixin icon($index, $size) {
+	line-height: 1;
+	vertical-align: middle;
+
+	&:before {
+		// Manually define the icon set */
+		$columns: 6; // Number of icons going across
+		background-image: url(../images/icon_sprite.png);
+		background-size: $columns * 100%;
+
+		// Size icon will be displayed */
+		width: #{$size}px;
+		height: #{$size}px;
+
+		// Position background-image based on number of icons in sprite */
+		background-position: #{(100/($columns - 1)*($index - 1))}% 0;
+
+		// Set position to inline */
+		content: "";
+		display: inline-block;
+		line-height: #{$size}px;
+		vertical-align: middle;
+	}
+}
