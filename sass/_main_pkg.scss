@@ -57,6 +57,10 @@ a {
 .chunk {
 	margin-bottom: padding(2);
 
+	.post-title {
+		margin-bottom: 0;
+	}
+
 	.date {
 		font-style: italic;
 	}
