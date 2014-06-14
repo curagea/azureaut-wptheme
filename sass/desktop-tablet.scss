@@ -34,14 +34,37 @@
 			}
 		}
 
-		.main-menu h4 {
-			margin-bottom: 0;
+		.main-menu {
+			& > li {
+				margin-bottom: padding(0.5);
+			}
+			h4 {
+				margin-bottom: 0;
+
+				&:before {
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: padding(0.25);
+				}
+
+				&.journal {
+					@include menu-icon(1, padding(1));
+				}
+				&.pastime {
+					@include menu-icon(2, padding(1));
+				}
+				&.portfolio {
+					@include menu-icon(3, padding(1));
+				}
+				&.about {
+					@include menu-icon(4, padding(1));
+				}
+			}
 		}
 
 		.sub-menu {
 			@include reset-list;
-			margin-left: padding(0.5);
-			margin-bottom: padding(1);
+			margin-left: padding(1.5);
 		}
 	}
 }

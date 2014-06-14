@@ -39,19 +39,19 @@
 			}
 
 			&.journal {
-				@include menu-icon(1);
+				@include circley-icon(1);
 			}
 
 			&.pastime {
-				@include menu-icon(3);
+				@include circley-icon(3);
 			}
 
 			&.portfolio {
-				@include menu-icon(2);
+				@include circley-icon(2);
 			}
 
 			&.about {
-				@include menu-icon(4);
+				@include circley-icon(4);
 			}
 		}
 	}

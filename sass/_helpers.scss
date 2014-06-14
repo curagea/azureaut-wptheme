@@ -33,7 +33,7 @@
 }
 
 @mixin sans-serif {
-	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Merriweather Sans', 'Helvetica Neue', Helvetica, sans-serif;
 	text-rendering: optimizeLegibility;
 }
 
@@ -47,7 +47,15 @@
 	content: "";
 }
 
-@mixin menu-icon($index) {
+@mixin menu-icon($index, $size) {
+	&:before {
+		@include icon($index, 4, url(../images/menu-icons.png));
+		width: $size;
+		height: $size;
+	}
+}
+
+@mixin circley-icon($index) {
 	i {
 		background-color: $light-gray-blue;
 		border-radius: 50%;
