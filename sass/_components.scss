@@ -35,64 +35,56 @@
 			display: block;
 			position: relative;
 
-			&:before {
-				content: "";
-				background: {
-					repeat: no-repeat;
-					size: 65%;
-					position: center;
-					color: $light-gray-blue;
-				}
-				border-radius: 50%;
+			i {
 			}
 
-			&.journal:before {
-				background-image: url(../images/journal-icon.png);
+			&.journal {
+				@include menu-icon(1);
 			}
 
-			&.pastime:before {
-				background-image: url(../images/pastime-icon.png);
+			&.pastime {
+				@include menu-icon(3);
 			}
 
-			&.portfolio:before {
-				background-image: url(../images/portfolio-icon.png);
+			&.portfolio {
+				@include menu-icon(2);
 			}
 
-			&.about:before {
-				background-image: url(../images/about-icon.png);
+			&.about {
+				@include menu-icon(4);
 			}
 		}
 	}
 }
 
-@mixin external-links-icon($icon-size: 32) {
+@mixin external-links-icon($icon-size: 32px) {
 	a {
 		span {
 			@include offscreen;
 		}
 
 		&.fb {
-			@include icon(1, $icon-size);
+			@include external-link-icon(1, $icon-size);
 		}
 
 		&.flickr {
-			@include icon(2, $icon-size);
+			@include external-link-icon(2, $icon-size);
 		}
 
 		&.twitter {
-			@include icon(3, $icon-size);
+			@include external-link-icon(3, $icon-size);
 		}
 
 		&.github {
-			@include icon(4, $icon-size);
+			@include external-link-icon(4, $icon-size);
 		}
 
 		&.pinterest {
-			@include icon(5, $icon-size);
+			@include external-link-icon(5, $icon-size);
 		}
 
 		&.instagram {
-			@include icon(6, $icon-size);
+			@include external-link-icon(6, $icon-size);
 		}
 	}
 }
@@ -118,4 +110,26 @@
 		left: 35%;
 		top: 10%;
 	}
+}
+
+.mobile .circley-menu {
+	li {
+		text-align: left;
+
+		a {
+			i {
+				@include fluid-square(25%, inline-block);
+				vertical-align: middle;
+			}
+
+			span {
+				@include font-size(1.5);
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: padding(0.5);
+				text-decoration: underline;
+			}
+		}
+	}
+
 }

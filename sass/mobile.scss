@@ -14,30 +14,9 @@
 	}
 }
 
-.circley-menu {
-	li {
-		text-align: left;
-
-		a {
-			&:before {
-				@include fluid-square(25%, inline-block);
-				vertical-align: middle;
-			}
-
-			span {
-				@include font-size(1.5);
-				display: inline-block;
-				vertical-align: middle;
-				margin-left: padding(1);
-				text-decoration: underline;
-			}
-		}
-	}
-}
-
 .external-links {
 	@include pad();
-	@include external-links-icon(128);
+	@include external-links-icon(128px);
 
 	a {
 		margin-right: padding(0.5);

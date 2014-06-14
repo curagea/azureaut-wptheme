@@ -52,7 +52,7 @@
 
 .external-links {
 	margin-bottom: padding(0.5);
-	@include external-links-icon(32);
+	@include external-links-icon;
 
 	a {
 		opacity: 0.7;

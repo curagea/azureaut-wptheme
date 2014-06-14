@@ -37,27 +37,42 @@
 	text-rendering: optimizeLegibility;
 }
 
-@mixin icon($index, $size) {
+@mixin icon($index, $columns, $sprite-file) {
+	background-image: $sprite-file;
+	background-size: $columns * 100%;
+
+	// Position background-image based on number of icons in sprite */
+	background-position: #{(100/($columns - 1)*($index - 1))}% 0;
+
+	content: "";
+}
+
+@mixin menu-icon($index) {
+	i {
+		background-color: $light-gray-blue;
+		border-radius: 50%;
+		position: relative;
+
+		&:before {
+			@include icon($index, 4, url(../images/menu-icons.png));
+			@include fluid-square(65%);
+			position: absolute;
+			top: 17.5%;
+			left: 17.5%;
+		}
+	}
+}
+
+@mixin external-link-icon($index, $size) {
 	line-height: 1;
 	vertical-align: middle;
 
 	&:before {
-		// Manually define the icon set */
-		$columns: 6; // Number of icons going across
-		background-image: url(../images/icon_sprite.png);
-		background-size: $columns * 100%;
-
-		// Size icon will be displayed */
-		width: #{$size}px;
-		height: #{$size}px;
-
-		// Position background-image based on number of icons in sprite */
-		background-position: #{(100/($columns - 1)*($index - 1))}% 0;
-
-		// Set position to inline */
-		content: "";
+		@include icon($index, 6, url(../images/external-icons.png));
+		width: $size;
+		height: $size;
 		display: inline-block;
-		line-height: #{$size}px;
+		line-height: $size;
 		vertical-align: middle;
 	}
 }

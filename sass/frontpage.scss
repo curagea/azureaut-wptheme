@@ -37,14 +37,14 @@ $unsemantic-ie7-support: false;
 
 		a {
 
-			&:before {
+			i {
 				@include fluid-square(100%);
 			}
 
 			span {
 				@include font-size(1.25);
 				display: block;
-				padding-top: padding(0.5);
+				padding-top: padding(0.25);
 			}
 		}
 	}
@@ -61,21 +61,21 @@ $unsemantic-ie7-support: false;
 
 		a {
 
-			&:before {
+			i {
 				position: relative;
 				top: 0;
 				opacity: 0.7;
 				@include transition(all 0.5s);
 			}
 
-			&:hover:before,
-			&:focus:before {
+			&:hover i,
+			&:focus i {
 				opacity: 1;
 				top: -1 * padding(0.5);
 				box-shadow: 0 padding(0.5) hsl(0, 0, 50);
 			}
 
-			&:active:before {
+			&:active i {
 				top: 0;
 				box-shadow: none;
 				@include transition(none);

@@ -20,22 +20,22 @@
 		<ul class="text-centered reset-list">
 			<li>
 				<a href="<?php echo page_link('journal') ?>" class="journal">
-					<span>Journal</span>
+					<i></i><span>Journal</span>
 				</a>
 			</li>
 			<li>
 				<a href="<?php echo page_link('pastime') ?>" class="pastime">
-					<span>Pastime</span>
+					<i></i><span>Pastime</span>
 				</a>
 			</li>
 			<li>
 				<a href="<?php echo page_link('portfolio') ?>" class="portfolio">
-					<span>Portfolio</span>
+					<i></i><span>Portfolio</span>
 				</a>
 			</li>
 			<li>
 				<a href="<?php echo page_link('about') ?>" class="about">
-					<span>About</span>
+					<i></i><span>About</span>
 				</a>
 			</li>
 		</ul>
