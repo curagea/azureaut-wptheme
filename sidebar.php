@@ -14,7 +14,7 @@
 		<nav>
 			<ul class="reset-list main-menu">
 				<li>
-					<h4 class="journal"><i></i><a href="<?php echo page_link('journal') ?>">Journal</a></h4>
+					<h4 class="journal"><a href="<?php echo page_link('journal') ?>">Journal</a></h4>
 					<?php
 						if ($is_journal_post) {
 							get_sidebar('journal');
@@ -22,7 +22,7 @@
 					?>
 				</li>
 				<li>
-					<h4 class="pastime"><i></i><a href="<?php echo page_link('pastime') ?>">Pastime</a></h4>
+					<h4 class="pastime"><a href="<?php echo page_link('pastime') ?>">Pastime</a></h4>
 					<?php
 						if ($is_pastime_post) {
 							get_sidebar('pastime');
@@ -30,7 +30,7 @@
 					?>
 				</li>
 				<li>
-					<h4 class="portfolio"><i></i><a href="<?php echo page_link('portfolio') ?>">Portfolio</a></h4>
+					<h4 class="portfolio"><a href="<?php echo page_link('portfolio') ?>">Portfolio</a></h4>
 					<?php
 						if ($is_portfolio_post) {
 							get_sidebar('portfolio');
@@ -38,7 +38,7 @@
 					?>
 				</li>
 				<li>
-					<h4 class="about"><i></i><a href="<?php echo page_link('about') ?>">About</a></h4>
+					<h4 class="about"><a href="<?php echo page_link('about') ?>">About</a></h4>
 					<?php
 						if (is_page('about')) {
 							get_sidebar('about');

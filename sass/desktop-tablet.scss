@@ -44,27 +44,27 @@
 				&:before {
 					display: inline-block;
 					vertical-align: middle;
-					margin-right: padding(0.25);
+					margin-right: 10px;
 				}
 
 				&.journal {
-					@include menu-icon(1, padding(1));
+					@include menu-icon(1, 32px);
 				}
 				&.pastime {
-					@include menu-icon(2, padding(1));
+					@include menu-icon(2, 32px);
 				}
 				&.portfolio {
-					@include menu-icon(3, padding(1));
+					@include menu-icon(3, 32px);
 				}
 				&.about {
-					@include menu-icon(4, padding(1));
+					@include menu-icon(4, 32px);
 				}
 			}
 		}
 
 		.sub-menu {
 			@include reset-list;
-			margin-left: padding(1.5);
+			margin-left: 42px;
 		}
 	}
 }
