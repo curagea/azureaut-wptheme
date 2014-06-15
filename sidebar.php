@@ -48,10 +48,6 @@
 			</ul>
 		</nav>
 
-		<a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Syndicate this site using RSS'); ?>">
-			RSS
-		</a>
-
 		<?php get_template_part('external-links') ?>
 
 		<div class="search-form">

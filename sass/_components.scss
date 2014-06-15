@@ -86,6 +86,13 @@
 		&.instagram {
 			@include external-link-icon(6, $icon-size);
 		}
+
+		&.linkedin {
+			@include external-link-icon(7, $icon-size);
+		}
+		&.rss {
+			@include external-link-icon(8, $icon-size);
+		}
 	}
 }
 

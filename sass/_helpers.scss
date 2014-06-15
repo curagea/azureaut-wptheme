@@ -76,7 +76,7 @@
 	vertical-align: middle;
 
 	&:before {
-		@include icon($index, 6, url(../images/external-icons.png));
+		@include icon($index, 8, url(../images/external-icons.png));
 		width: $size;
 		height: $size;
 		display: inline-block;
