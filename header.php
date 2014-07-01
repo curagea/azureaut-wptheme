@@ -10,7 +10,6 @@
 			}
 		});
 	</script>
-
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.ico" />	<title>

@@ -23,15 +23,13 @@ html {
 }
 
 /** Dealing with FOUT and web fonts */
-
-html,
-.wf-loading {
+html {
 	visibility: hidden;
 	opacity: 0;
-	@include transition(all 0.3s);
 }
 .wf-active,
 .wf-inactive {
+	@include transition(all 0.3s);
 	opacity: 1;
 	visibility: visible;
 }
