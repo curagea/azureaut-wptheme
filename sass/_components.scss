@@ -59,6 +59,8 @@
 
 @mixin external-links-icon($icon-size: 32px) {
 	a {
+		margin-bottom: padding(0.5);
+
 		span {
 			@include offscreen;
 		}
@@ -105,6 +107,7 @@
 		repeat: no-repeat;
 		size: contain;
 	}
+	-ms-behavior: url(../backgroundsize.min.htc);
 
 	&:before {
 		content: '';

@@ -73,15 +73,18 @@
 }
 
 @mixin external-link-icon($index, $size) {
-	line-height: 1;
+	width: $size;
+	height: $size;
+	display: inline-block;
+	line-height: $size;
 	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
 
-	&:before {
-		@include icon($index, 8, url(../images/external-icons.png));
-		width: $size;
-		height: $size;
-		display: inline-block;
-		line-height: $size;
-		vertical-align: middle;
+	.sprite {
+		height: 100%;
+		position: absolute;
+		left: -1 * ($index - 1) * 100%;
 	}
+
 }
