@@ -82,6 +82,7 @@
 	overflow: hidden;
 
 	.sprite {
+		width: auto;
 		height: 100%;
 		position: absolute;
 		left: -1 * ($index - 1) * 100%;
