@@ -10,27 +10,27 @@
 	</a>
 	-->
 	<a href="#" class="twitter">
-		<img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>">
+		<i><img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>"></i>
 		<span>Twitter</span>
 	</a>
 	<a href="#" class="flickr">
-		<img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>">
+		<i><img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>"></i>
 		<span>Flickr</span>
 	</a>
 	<a href="#" class="pinterest">
-		<img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>">
+		<i><img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>"></i>
 		<span>Pinterest</span>
 	</a>
 	<a href="#" class="instagram">
-		<img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>">
+		<i><img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>"></i>
 		<span>Instagram</span>
 	</a>
 	<a href="#" class="github">
-		<img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>">
+		<i><img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>"></i>
 		<span>Github</span>
 	</a>
 	<a href="<?php echo get_bloginfo_rss('rss2_url'); ?>" class="rss">
-		<img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>">
+		<i><img class="sprite" alt="" width="0" height="1" src="<?php echo $external_icons_img; ?>"></i>
 		<span>RSS></span>
 	</a>
 </div>

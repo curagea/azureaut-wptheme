@@ -48,11 +48,27 @@
 	content: "";
 }
 
-@mixin menu-icon($index, $size) {
-	&:before {
-		@include icon($index, 4, url(../images/menu-icons.png));
+@mixin inline-icon($size) {
+	i {
+		display: inline-block;
 		width: $size;
 		height: $size;
+		line-height: $size;
+		vertical-align: middle;
+		position: relative;
+		overflow: hidden;
+
+		.sprite {
+			width: auto;
+			height: 100%;
+			position: absolute;
+		}
+	}
+}
+
+@mixin inline-icon-index($index) {
+	.sprite {
+		left: -1 * ($index - 1) * 100%;
 	}
 }
 
@@ -70,22 +86,4 @@
 			left: 17.5%;
 		}
 	}
-}
-
-@mixin external-link-icon($index, $size) {
-	width: $size;
-	height: $size;
-	display: inline-block;
-	line-height: $size;
-	vertical-align: middle;
-	position: relative;
-	overflow: hidden;
-
-	.sprite {
-		width: auto;
-		height: 100%;
-		position: absolute;
-		left: -1 * ($index - 1) * 100%;
-	}
-
 }

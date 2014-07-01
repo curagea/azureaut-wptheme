@@ -46,32 +46,27 @@
 				margin-bottom: padding(0.5);
 			}
 			h4 {
+				@include inline-icon(32px);
 				margin-bottom: 0;
 
-				&:before {
-					display: inline-block;
-					vertical-align: middle;
-					margin-right: 10px;
-				}
-
 				&.journal {
-					@include menu-icon(1, 32px);
+					@include inline-icon-index(1);
 				}
 				&.pastime {
-					@include menu-icon(2, 32px);
+					@include inline-icon-index(2);
 				}
 				&.portfolio {
-					@include menu-icon(3, 32px);
+					@include inline-icon-index(3);
 				}
 				&.about {
-					@include menu-icon(4, 32px);
+					@include inline-icon-index(4);
 				}
 			}
 		}
 
 		.sub-menu {
 			@include reset-list;
-			margin-left: 42px;
+			margin-left: 39px;
 		}
 	}
 }

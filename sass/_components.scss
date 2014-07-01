@@ -59,6 +59,8 @@
 
 @mixin external-links-icon($icon-size: 32px) {
 	a {
+		@include inline-icon($icon-size);
+		display: inline-block;
 		margin-bottom: padding(0.5);
 
 		span {
@@ -66,34 +68,34 @@
 		}
 
 		&.fb {
-			@include external-link-icon(1, $icon-size);
+			@include inline-icon-index(1);
 		}
 
 		&.flickr {
-			@include external-link-icon(2, $icon-size);
+			@include inline-icon-index(2);
 		}
 
 		&.twitter {
-			@include external-link-icon(3, $icon-size);
+			@include inline-icon-index(3);
 		}
 
 		&.github {
-			@include external-link-icon(4, $icon-size);
+			@include inline-icon-index(4);
 		}
 
 		&.pinterest {
-			@include external-link-icon(5, $icon-size);
+			@include inline-icon-index(5);
 		}
 
 		&.instagram {
-			@include external-link-icon(6, $icon-size);
+			@include inline-icon-index(6);
 		}
 
 		&.linkedin {
-			@include external-link-icon(7, $icon-size);
+			@include inline-icon-index(7);
 		}
 		&.rss {
-			@include external-link-icon(8, $icon-size);
+			@include inline-icon-index(8);
 		}
 	}
 }
