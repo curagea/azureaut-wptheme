@@ -14,5 +14,8 @@
 	wp_reset_query();
 	wp_footer();
 ?>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	  <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/selectivizr-min.js"></script>
+	<![endif]-->
 </body>
 </html>

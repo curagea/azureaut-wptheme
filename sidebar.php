@@ -8,7 +8,7 @@
 ?>
 
 <div class="sidebar">
-	<div class="content sticky">
+	<div class="content">
 		<h3>Azure Autonomie</h3>
 
 		<nav>
@@ -56,7 +56,7 @@
 
 	</div>
 
-	<footer class="sans-serif sticky">
+	<footer class="sans-serif">
 		<?php get_template_part('copyright') ?>
 	</footer>
 

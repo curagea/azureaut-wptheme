@@ -25,7 +25,12 @@
 		@include linear-gradient(90deg, hsl(0, 0, 95), $off-white padding(0.75));
 		position: relative;
 
+		.content {
+			position: fixed;
+		}
+
 		footer {
+			position: fixed;
 			bottom: 0;
 			padding-bottom: padding(1);
 

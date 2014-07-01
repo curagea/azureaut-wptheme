@@ -40,6 +40,7 @@
 @mixin icon($index, $columns, $sprite-file) {
 	background-image: $sprite-file;
 	background-size: $columns * 100%;
+	-ms-behavior: url(../backgroundsize.min.htc);
 
 	// Position background-image based on number of icons in sprite */
 	background-position: #{(100/($columns - 1)*($index - 1))}% 0;
