@@ -6,48 +6,6 @@ function page_link($page_name) {
 }
 
 /**
-* @desc a wrapper for the wordpress wp_list_pages() function that
-* will display one or two unordered lists:
-* 1) primary nav, a ul with css id #nav - always shown even if empty
-* 2) Optional secondary nav, a ul with css id #subNav
-*
-* TODO: default css provided to allow space for both nav 'bars' one below the other to stop the page jig
-*
-* @return string (html)
-*/
-
-function main_nav() {
-	$output = "";
-	$home_id = get_page_id(home);
-	$params = "title_li=&depth=1&echo=0&exclude=$home_id";
-
-	// always show top level
-	$output .= '<div class="main-menu">';
-	$output .= '<ul>';
-	$output .= wp_list_pages($params);
-	$output .= '</ul>';
-	$output .= '</div>';
-
-	return $output;
-}
-
-/**
-* @desc make the site's heading & tagline an h1 on the homepage and an h4 on internal pages
-* Naked's default CSS should make the two different states look identical
-*/
-function do_heading() {
-	$output = "";
-
-	if(is_home()) $output .= "<h1 id='site-title'>"; else  $output .= "<h4 id='site-title'>";
-
-	$output .= "<a href='"  . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a>";
-
-	if(is_home()) $output .= "</h1>"; else  $output .= "</h4>";
-
-	return $output;
-}
-
-/**
 * register_sidebar()
 *
 * @desc Registers the markup to display in and around a widget
@@ -125,8 +83,8 @@ function shorten_with_ellipsis($inputstring,$characters) {
 // are necessary; the last one is the crucial one. Saying "2" means the function
 // "filter_shorten_linktext()" takes 2 arguments. If you don't say so here, the
 // hook won't pass them when it's called and you'll get a PHP error.
-add_filter('previous_post_link','filter_shorten_linktext',10,2);
-add_filter('next_post_link','filter_shorten_linktext',10,2);
+add_filter('previous_post_link','filter_shorten_linktext', 10, 2);
+add_filter('next_post_link','filter_shorten_linktext', 10, 2);
 
 // Register Theme Features
 function custom_theme_features() {
@@ -142,6 +100,14 @@ function custom_theme_features() {
 	// Pitch the admin bar
 	show_admin_bar(false);
 }
+
+// add ie conditional html5 shim to header
+function add_ie_html5_shim () {
+	echo '<!--[if lt IE 9]>';
+	echo '<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+	echo '<![endif]-->';
+}
+add_action('wp_head', 'add_ie_html5_shim');
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 

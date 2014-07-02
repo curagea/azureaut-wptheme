@@ -12,7 +12,8 @@
 	</script>
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.ico" />	<title>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.ico" />
+	<title>
 		<?php
 			if (is_404()){
 				echo 'Can\'t find it! | ';
@@ -32,11 +33,6 @@
 	<?php endif; ?>
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<!-- Pulled from http://code.google.com/p/html5shiv/ -->
-	<!--[if lt IE 9]>
-		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
 	<?php wp_head(); ?>
 </head>
 
