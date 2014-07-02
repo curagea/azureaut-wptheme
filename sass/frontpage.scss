@@ -93,3 +93,13 @@ $unsemantic-ie7-support: false;
 		}
 	}
 }
+
+.lt-ie9 .desktop .frontpage .circley-menu {
+	a i:before {
+		width: 80%;
+		padding-bottom: 80%;
+		left: 10%;
+		top: 10%;
+	}
+}
+
