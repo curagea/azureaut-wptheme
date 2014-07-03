@@ -2,8 +2,8 @@
 <!--[if IE 8]>    <html class="lt-ie9" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-	<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-	<script>
+	<script data-cfasync="false" src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+	<script data-cfasync="false">
 		WebFont.load({
 			google: {
 				families: ['Merriweather+Sans:700:latin', 'Merriweather::latin']
