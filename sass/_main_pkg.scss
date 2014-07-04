@@ -92,8 +92,3 @@ a {
 		font-weight: bold;
 	}
 }
-
-/** For WP Stats/Jetpack */
-#wpstats {
-	@include offscreen;
-}
