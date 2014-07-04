@@ -6,24 +6,6 @@ function page_link($page_name) {
 }
 
 /**
-* register_sidebar()
-*
-* @desc Registers the markup to display in and around a widget
-*/
-if ( function_exists('register_sidebar') ) {
-	register_sidebar(array('name'=>'journal'));
-	register_sidebar(array('name'=>'portfolio'));
-	register_sidebar(array('name'=>'about'));
-	register_sidebar(array('name'=>'pastime'));
-	register_sidebar(array(
-		'name'=>'twitter-box',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => ''));
-}
-
-/**
 * Check to see if this page will paginate
 *
 * @return boolean
