@@ -91,7 +91,10 @@ function add_ie_html5_shim () {
 }
 add_action('wp_head', 'add_ie_html5_shim');
 
-add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
+
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(200, 200, true);
 
 // Hook into the 'after_setup_theme' action
 add_action( 'after_setup_theme', 'custom_theme_features' );

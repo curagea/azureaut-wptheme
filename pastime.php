@@ -10,9 +10,9 @@
 ?>
 	<div class="chunk" id="post-<?php the_ID(); ?>">
 		<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-		<? echo get_image('thumbnail'); ?>
+		<?= the_post_thumbnail(); ?>
 		<span class="meta tags">
-			<?= get('creation-details')?>
+			<?= get_post_meta(get_the_ID(), 'creation-details', true)?>
 		</span>
 		<div class="description"><?php the_excerpt(); ?></div>
 		<a class="more-link" href="<?php the_permalink() ?>">More about this project</a>
