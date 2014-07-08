@@ -8,7 +8,7 @@
 	while (have_posts()) : the_post();
 ?>
 	<h1><?php the_title(); ?></h1>
-	<?php the_post_thumbnail('full', array('class' => 'avatar')); ?>
+	<?php the_post_thumbnail('thumbnail', array('class' => 'avatar attachment-post-thumbnail')); ?>
 	<?php the_content(); ?>
 <?php endwhile; ?>
 
