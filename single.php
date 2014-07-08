@@ -12,18 +12,16 @@
 	<div class="entry" id="post-<?php the_ID(); ?>">
 
 		<h1 class="post-title"><?php the_title(); ?></h1>
-		<?php if ($is_portfolio_post): ?>
-			<span class="meta date"><?= get('project-start') . ' &mdash; ' . get('project-end'); ?></span>
-			<span class="meta tags"><a href="<?= get('project-link') ?>"><?= get('project-link') ?></a></span>
-		<? elseif ($is_pastime_post): ?>
-			<span class="meta tags"><?= get('creation-details')?></span>
-		<? else: ?>
-			<span class="meta date"><? the_date(); ?></span>
-			<span class="meta tags"><? the_tags('') ?></span>
-		<? endif; ?>
 		<div class="content">
-			<? if ($is_portfolio_post): ?>
-				<? echo get_image('thumbnail'); ?>
+			<?php if ($is_portfolio_post): ?>
+				<?= the_post_thumbnail(); ?>
+				<p class="meta date"><?= get_post_meta(get_the_ID(), 'project-start', true) . ' &mdash; ' . get_post_meta(get_the_ID(), 'project-end', true); ?></p>
+				<p class="meta tags"><a href="<?= get_post_meta(get_the_ID(), 'project-link', true) ?>"><?= get_post_meta(get_the_ID(), 'project-link', true) ?></a></p>
+			<? elseif ($is_pastime_post): ?>
+				<p class="meta tags"><?= get_post_meta(get_the_ID(), 'creation-details', true)?></p>
+			<? else: ?>
+				<p class="meta date"><? the_date(); ?></p>
+				<p class="meta tags"><? the_tags('') ?></p>
 			<? endif; ?>
 
 			<?php the_content(__('(more...)')); ?>
@@ -38,7 +36,7 @@
 	</ul>
 
 <?php
-			comments_template();
+		comments_template();
 		endwhile;
 	else:
 ?>
