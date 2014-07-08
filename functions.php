@@ -1,7 +1,7 @@
 <?php
 
-function page_link($page_name) {
-	$page_obj = get_page_by_title($page_name);
+function page_link($page_slug) {
+	$page_obj = get_page_by_path($page_slug);
 	return get_page_link($page_obj->ID);
 }
 
