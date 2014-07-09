@@ -10,8 +10,7 @@
 	<section class="text-centered">
 		<h1>Oh hi!</h1>
 		<p class="intro mar-bot_1">
-			I&rsquo;m Hannah, and welcome to my site, mysteriously named &ldquo;Azure
-			Autonomie&rdquo;. Do explore and discover within, and
+			I&rsquo;m Hannah, and welcome to my site. Explore and discover within, and
 			who knows &mdash; you might learn a thing or two <a href="/about">about me</a>.
 		</p>
 	</section>
