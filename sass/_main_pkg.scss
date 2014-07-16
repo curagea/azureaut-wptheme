@@ -89,7 +89,12 @@ a {
 .comments-area {
 	margin-top: padding(1);
 
+	.comment-author .avatar {
+		float: left;
+		margin-right: padding(0.5);
+	}
+
 	.comment-metadata {
-		@include font-size(0.5);
+		@include font-size(0.75);
 	}
 }
