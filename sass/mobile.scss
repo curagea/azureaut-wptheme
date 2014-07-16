@@ -16,7 +16,7 @@
 
 .external-links {
 	@include pad();
-	@include external-links-icon(128px);
+	@include external-links-icon(48px);
 
 	a {
 		margin-right: padding(0.5);
