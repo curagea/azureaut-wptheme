@@ -85,16 +85,26 @@ a {
 }
 
 
-/** For the Social plugin */
+// For the comments section. Note that WP generated the markup for individual comments,
+// and it sucks ass >:(
 .comments-area {
 	margin-top: padding(1);
+
+	.comment {
+		padding-bottom: padding(1.5);
+	}
 
 	.comment-author .avatar {
 		float: left;
 		margin-right: padding(0.5);
+		margin-bottom: padding(0.25);
 	}
 
 	.comment-metadata {
 		@include font-size(0.75);
+	}
+
+	.comment-content {
+		clear: both;
 	}
 }
