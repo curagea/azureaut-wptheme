@@ -14,13 +14,13 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
 
 	<h2 class="comments-title">
 		<?php
-			printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'twentyfourteen' ),
+			printf( _n( 'One thought&hellip;', '%1$s thoughts&hellip;', get_comments_number(), 'twentyfourteen' ),
 				number_format_i18n( get_comments_number() ), get_the_title() );
 		?>
 	</h2>
@@ -33,12 +33,12 @@ if ( post_password_required() ) {
 	</nav><!-- #comment-nav-above -->
 	<?php endif; // Check for comment navigation. ?>
 
-	<ol class="comment-list">
+	<ul class="comment-list reset-list">
 		<?php
 			wp_list_comments( array(
-				'style'      => 'ol',
+				'style'      => 'ul',
 				'short_ping' => true,
-				'avatar_size'=> 34,
+				'avatar_size'=> 64,
 			) );
 		?>
 	</ol><!-- .comment-list -->
@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 	<?php endif; // Check for comment navigation. ?>
 
 	<?php if ( ! comments_open() ) : ?>
-	<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfourteen' ); ?></p>
+	<p class="no-comments"><?php _e( 'Comments are closed.', 'azureautonomie' ); ?></p>
 	<?php endif; ?>
 
 	<?php endif; // have_comments() ?>

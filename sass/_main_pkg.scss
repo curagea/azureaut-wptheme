@@ -86,10 +86,10 @@ a {
 
 
 /** For the Social plugin */
-#social {
-	background: transparent !important;
+.comments-area {
+	margin-top: padding(1);
 
-	.comment-reply-title {
-		font-weight: bold;
+	.comment-metadata {
+		@include font-size(0.5);
 	}
 }
