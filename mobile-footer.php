@@ -1,4 +1,4 @@
-<nav class="circley-menu sans-serif">
+<nav id="main-menu" class="circley-menu sans-serif">
 	<ul class="reset-list">
 		<li>
 			<a href="<?php echo page_link('journal') ?>" class="journal">
