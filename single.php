@@ -15,18 +15,18 @@
 		<div class="content">
 			<?php if ($is_portfolio_post): ?>
 				<?= the_post_thumbnail(); ?>
-				<p class="meta date"><?= get_post_meta(get_the_ID(), 'project-start', true) . ' &mdash; ' . get_post_meta(get_the_ID(), 'project-end', true); ?></p>
-				<p class="meta tags"><a href="<?= get_post_meta(get_the_ID(), 'project-link', true) ?>"><?= get_post_meta(get_the_ID(), 'project-link', true) ?></a></p>
+				<div class="meta date"><?= get_post_meta(get_the_ID(), 'project-start', true) . ' &mdash; ' . get_post_meta(get_the_ID(), 'project-end', true); ?></div>
+				<div class="meta tags"><a href="<?= get_post_meta(get_the_ID(), 'project-link', true) ?>"><?= get_post_meta(get_the_ID(), 'project-link', true) ?></a></div>
 			<? elseif ($is_pastime_post): ?>
-				<p class="meta tags"><?= get_post_meta(get_the_ID(), 'creation-details', true)?></p>
+				<div class="meta tags"><?= get_post_meta(get_the_ID(), 'creation-details', true)?></div>
 			<? else: ?>
-				<p class="meta date"><? the_date(); ?></p>
-				<p class="meta tags"><? the_tags('') ?></p>
+				<div class="meta date"><? the_date(); ?></div>
+				<div class="meta tags"><? the_tags('') ?></div>
 			<? endif; ?>
 
 			<?php the_content(__('(more...)')); ?>
 		</div>
-		<p class="post-meta">Categories: <?php the_category(', ') . edit_post_link(__('Edit'), ' | '); ?></p>
+		<div class="post-meta">Categories: <?php the_category(', ') . edit_post_link(__('Edit'), ' | '); ?></div>
 
 	</div>
 
