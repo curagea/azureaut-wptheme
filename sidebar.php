@@ -11,7 +11,7 @@
 
 <div class="sidebar">
 	<div class="content">
-		<h3>bloginfo( 'name' );</h3>
+		<h3><?php bloginfo( 'name' );?></h3>
 
 		<nav>
 			<ul class="reset-list main-menu">
